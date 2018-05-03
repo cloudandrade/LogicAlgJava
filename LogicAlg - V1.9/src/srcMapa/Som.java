@@ -10,7 +10,7 @@ public class Som {
     private static Sound musica;
     public static void play(String audio){
        stop();
-       musica = new Sound(URL.audio(audio));
+       musica = new Sound(URL.audio(audio + ".wav"));
        Som.musica.play();
        Som.musica.setRepeat(true);
     }

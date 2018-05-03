@@ -67,7 +67,7 @@ public Menu(){
     
     inimenu.add(desktop);//adicionando o painel a JFrame
     
-    Som.play("BGM1.wav");//executando o som
+    Som.play("BGM_MENU");//executando o som
 }
 
 public class BtnJogar implements ActionListener {

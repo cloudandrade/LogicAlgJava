@@ -32,7 +32,7 @@ public class Fase extends JPanel implements ActionListener { //CLASSE FASE - PAR
         
         tempo = new Timer(3,this);//DEFININDO PARA A IAMGEM PRINTAR NA TELA A CADA 7 MILESEGUNDOS
         tempo.start();//INICINADO ESSE TEMPO
-Som.play("BGM2.wav");
+Som.play("BGM_MAPA");
        
         
     }
