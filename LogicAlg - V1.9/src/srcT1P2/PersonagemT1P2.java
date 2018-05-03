@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent; //Importa classe responsavel de obter dados do t
 import javax.swing.ImageIcon;// Impostado para conseguir pegar as imagens.
 import javax.swing.JFrame;
 import srcMapa.ConfJanela;
+import srcMapa.Som;
 
 public class PersonagemT1P2 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -23,8 +24,8 @@ public class PersonagemT1P2 extends JFrame{
     
   public void andar(){ //Criar um metodo para que o personagegm ande na tela.
       
-      System.out.println("CASA 4 X: " + Coord_P_x);
-      System.out.println("CASA 4 Y:" + Coord_P_y);
+      //System.out.println("CASA 4 X: " + Coord_P_x);
+      //System.out.println("CASA 4 Y:" + Coord_P_y);
 
       
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
@@ -41,8 +42,10 @@ public class PersonagemT1P2 extends JFrame{
   
 //-------------PORTA------------
        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
+       
        ConfJanela.getInstancia().setVisible(true);
-       dispose();
+        Som.play("BGM_MAPA");
+       JanelasT1P2.getInstancia().dispose();
         enter=0;
         }      
 //-------------Escolha 03 ------------

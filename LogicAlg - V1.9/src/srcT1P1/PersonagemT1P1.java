@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import srcMapa.ConfJanela;
+import srcMapa.Som;
 
 public class PersonagemT1P1 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -24,7 +25,7 @@ public class PersonagemT1P1 extends JFrame{
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.  
        
-          System.err.println(Coord_P_x);         
+          //System.err.println(Coord_P_x);         
           
        if (Coord_P_x<=29){ // Para não ultrapassar a parede esquerda. //29
        Coord_P_x=29+1;  
@@ -36,13 +37,14 @@ public class PersonagemT1P1 extends JFrame{
      //-------------PORTA------------
        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
        ConfJanela.getInstancia().setVisible(true);
-       dispose();
+        Som.play("BGM_MAPA");
+       JanelasT1P1.getInstancia().dispose();
         enter=0;
         }             
 //-------------Escolha DICA ------------
 
         if ((Coord_P_x>=1034) && (Coord_P_x<=1150)&& (enter==1)){ 
-       new BotaoDicas().show();
+       new BotaoDicas().show();//ao modificar para padrao meio singleton n se usa o show.
         enter=0;
         }
 

@@ -27,7 +27,7 @@ public class PersonagemTemplo01 extends JFrame{
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.  
        
-          System.err.println("PERSONAGEM TEMPLO 01 = " + Coord_P_x);    
+         // System.err.println("PERSONAGEM TEMPLO 01 = " + Coord_P_x);    
           
        if (Coord_P_x<=29){ // Para não ultrapassar a parede esquerda. //29
        Coord_P_x=29+1;  
@@ -49,6 +49,7 @@ public class PersonagemTemplo01 extends JFrame{
 
         if ((Coord_P_x>=1010) && (Coord_P_x<=1150)&& (enter==1)){ 
         new BotaoDicas().show();
+        JanelasTemplo01.getInstancia().dispose();
         enter=0;
         }
 
@@ -57,18 +58,20 @@ public class PersonagemTemplo01 extends JFrame{
         if ((Coord_P_x>=175) && (Coord_P_x<=333)&& (enter==1)){ 
             
   
-    new JanelasT1P1().show();   
-    ConfJanela.getInstancia().setVisible(false);
+    new JanelasT1P1();  
+    JanelasTemplo01.getInstancia().dispose();
     enter=0;
         }
 //-------------Escolha mesa 02 ------------
         if ((Coord_P_x>=480) && (Coord_P_x<=649)&& (enter==1)){ 
-        new JanelasT1P2().show(); 
+        new JanelasT1P2();
+        dispose();
         enter=0;
         }    
 //-------------Escolha mesa 03 ------------
         if ((Coord_P_x>=804) && (Coord_P_x<=982)&& (enter==1)){ 
         new JanelasT1P3().show();
+        JanelasTemplo01.getInstancia().dispose();
         enter=0;
         }
         

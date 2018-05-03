@@ -10,6 +10,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import srcMapa.Som;
 
 public class FaseTemplo01 extends JPanel implements ActionListener{//Criar a fase do jogo,
     //Ela vai estender o JPanel onde vai ser conhecida como um componente, para que seja possivel colocar na tela.
@@ -29,6 +30,7 @@ public class FaseTemplo01 extends JPanel implements ActionListener{//Criar a fas
       tempo = new Timer(5, this);//Será definido o tempo onde a imagem da fase será 
       //sempre atualizada para receber a mesma image, o this vai chamar a propria classe Criador_De_Fases.
       tempo.start();//Para ligar o tempo, e fazer com que ele inicie a contagem.
+      Som.play("BGM_01");
     }
     
     public void paint(Graphics g){//Para fazer a fase aparecer na tela.
