@@ -17,26 +17,7 @@ public class Botao03 extends JFrame {
     
     
   public Botao03() {
-          JMenuBar barramenu = new JMenuBar();
-    JMenu menu = new JMenu("Menu");
-    
-    JMenuItem desenvolvedores = new  JMenuItem("Desenvolvedores");
-    desenvolvedores.addActionListener(new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-    JOptionPane.showMessageDialog(null,"LogicAlg - Projeto desenvolvido por Leonardo dos Santos Esteves - Keven Pacheco Baraúna - Raphael Carvalho Monteiro - Erick Vinicius Pinto dos Santos", "Iinformações", JOptionPane.INFORMATION_MESSAGE);
-    }});        
-
-    JMenuItem sair = new  JMenuItem("Sair do Programa");
-    sair.addActionListener(new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-    System.exit(0);
-    }});    
-    menu.add(desenvolvedores);
-    menu.add(sair);
-    barramenu.add(menu);
-    setJMenuBar(barramenu); 
+          
   Icon Prato_Pronto = new ImageIcon("src\\ImagemT1P2\\Botao_OP_C.jpg");
   finalizar = new JButton(Prato_Pronto);
   add(finalizar);

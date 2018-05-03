@@ -59,7 +59,7 @@ public void mexer(){//PARA SE MOVIMENTAR
  
     if(x >= 0-1705 && x <= 0-1592  && enter ==1){// TEMPLO 01 //-1592 | -1705
    // new Templo01().show(); 
-    new JanelasTemplo01().show();
+    new JanelasTemplo01();
     ConfJanela.getInstancia().setVisible(false);
     casaum+=1;
     ordem=1;
