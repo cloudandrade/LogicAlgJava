@@ -29,7 +29,7 @@ public ConfJanela(){//CONSTRUTOR DA CLASSE
       trocatela = Menu.getInstancia();
      // trocatela.setExtendedState(JFrame.MAXIMIZED_BOTH); 
       trocatela.show();
-     dispose();
+     janelaconf.dispose();
     }
     });    
    

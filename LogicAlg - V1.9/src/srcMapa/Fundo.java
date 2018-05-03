@@ -48,7 +48,7 @@ public void mexer(){//PARA SE MOVIMENTAR
         teste = new JFrame();
 
         fila = new FilaLogicAlg();
-        System.out.println("FUNDO = " + x);
+        //System.out.println("FUNDO = " + x);
         
     x +=dx;// A POSIÇÃO X DO PERSONAGEM VAI RECEBER X + DX ( DX É DEFINIDO PELO keyPressed )
     y +=dy;// A POSIÇÃO Y DO PERSONAGEM VAI RECEBER Y + Dy ( DY É DEFINIDO PELO keyPressed )
