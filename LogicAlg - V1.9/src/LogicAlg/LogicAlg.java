@@ -1,5 +1,7 @@
 package LogicAlg; // PACOTE ONDE TEM A CLASSE PRINCIPAL
 
+//teste para mostrar as funcionalidades do github
+
 import javax.swing.JFrame;
 import srcMapa.Menu;
 
