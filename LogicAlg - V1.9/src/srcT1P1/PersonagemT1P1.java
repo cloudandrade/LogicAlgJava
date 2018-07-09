@@ -18,21 +18,21 @@ public class PersonagemT1P1 extends JFrame{
         ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT1P1\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
         this.Coord_P_x=81;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=730;//Local do personagem na tela: "linha".
+        this.Coord_P_y=610;//Local do personagem na tela: "linha".
     }
     
   public void andar(){ //Criar um metodo para que o personagegm ande na tela.
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.  
        
-          //System.err.println(Coord_P_x);         
+          //System.err.println("T1P1: " + Coord_P_x);         
           
-       if (Coord_P_x<=29){ // Para não ultrapassar a parede esquerda. //29
-       Coord_P_x=29+1;  
+       if (Coord_P_x<=76){ // Para não ultrapassar a parede esquerda. //29
+       Coord_P_x=76+1;  
        }
        
-       if (Coord_P_x>=1151){ // Para não ultrapassar a parede direita.//1151
-       Coord_P_x=1151-1;  
+       if (Coord_P_x>=1700){ // Para não ultrapassar a parede direita.//1151
+       Coord_P_x=1700-1;  
        }
      //-------------PORTA------------
        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
@@ -40,27 +40,34 @@ public class PersonagemT1P1 extends JFrame{
         Som.play("BGM_MAPA");
        JanelasT1P1.getInstancia().dispose();
         enter=0;
-        }             
+        }     
+       //-------------PT SAIDA ------------
+
+        if ((Coord_P_x>=114) && (Coord_P_x<=264)&& (enter==1)){ 
+       //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        enter=0;
+        }
+       
 //-------------Escolha DICA ------------
 
-        if ((Coord_P_x>=1034) && (Coord_P_x<=1150)&& (enter==1)){ 
+        if ((Coord_P_x>=1579) && (Coord_P_x<=1663)&& (enter==1)){ 
        new BotaoDicas().show();//ao modificar para padrao meio singleton n se usa o show.
         enter=0;
         }
 
 //-------------Escolha Porta 01 ------------
 
-        if ((Coord_P_x>=271) && (Coord_P_x<=432)&& (enter==1)){ 
+        if ((Coord_P_x>=420) && (Coord_P_x<=604)&& (enter==1)){ 
         new BotaoPortaUm().show();
         enter=0;
         }
 //-------------Escolha Porta 02 ------------
-        if ((Coord_P_x>=542 && Coord_P_x<=726)&& (enter==1)){ 
+        if ((Coord_P_x>=820 && Coord_P_x<=1006)&& (enter==1)){ 
         new BotaoPortaDois().show();
         enter=0;
         }    
 //-------------Escolha Porta 03 ------------
-        if ((Coord_P_x>=850 && Coord_P_x<=975)&& (enter==1)){ 
+        if ((Coord_P_x>=1234 && Coord_P_x<=1413)&& (enter==1)){ 
         new BotaoPortaTres().show();
         enter=0;
         }

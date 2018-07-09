@@ -57,7 +57,7 @@ public JanelasTemplo01() {// Para construir as telas, vamos criar um contrutor d
     janelatemplo1.add(new FaseTemplo01());
     janelatemplo1.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);// Este método permite fechar a tela do jogo ao clicar no X na parte direita superior. 
     janelatemplo1.setUndecorated(false);
-    janelatemplo1.setSize(1280,1024);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
+    janelatemplo1.setSize(1900,980);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
    // janelatemplo1.setExtendedState(MAXIMIZED_BOTH);//aplica tamanho maximo da tela
     janelatemplo1.setLocationRelativeTo(null);//Este método vai fazer com que a tela fique no centro da tela do pc.     
     janelatemplo1.setVisible(true);// Este método faz com que a tela apareça.

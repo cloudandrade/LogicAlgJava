@@ -49,7 +49,7 @@ public ConfJanela(){//CONSTRUTOR DA CLASSE
     Dimension tela = Toolkit.getDefaultToolkit().getScreenSize();//pega o tamanho da resolução da tela
     int telalar = (int) tela.getWidth();//pega a largura da tela
     int telaalt = (int) tela.getHeight();//pega a altura da tela
-    janelaconf.setSize(1280,1024);//coloca a altura e largura específica da resolução do monitor
+    janelaconf.setSize(1900,980);//coloca a altura e largura específica da resolução do monitor
     janelaconf.setUndecorated(false);
     janelaconf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);//FECHAR PROGRAMA QUANDO APERTAR NO "X"
     janelaconf.setLocationRelativeTo(null);//A JANELA ABRIR NO CENTRO NA TELA

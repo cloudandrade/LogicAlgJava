@@ -1,6 +1,7 @@
 
 package srcMapa;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -33,16 +34,21 @@ public Objetivos() {
     //add(Objetivos);
     janelaobj.setTitle("LogicAlg - BETA");
     janelaobj.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    janelaobj.setSize(1280,1024);//
+    janelaobj.setSize(1900,980);//
     //desktop.setSize(1280,720);//coloca a altura e largura específica da resolução do monitor
     janelaobj.setUndecorated(false);
     janelaobj.setLocationRelativeTo(null);
     janelaobj.setVisible(true);
     janelaobj.setResizable(true);
     prox = new JButton(">>");
-    prox.setBounds(1150, 500, 100, 50);//
+    prox.setBounds(1780, 505, 50, 50);//
     btnvoltar = new JButton("<<");
-    btnvoltar.setBounds(25, 500, 100, 50);//
+    btnvoltar.setBounds(45, 505, 50, 50);//
+    
+    btnvoltar.setBackground(new Color(255,255,255));
+    prox.setBackground(new Color(255,255,255));
+    
+    
      BtnProx executar = new BtnProx();
     prox.addActionListener(executar); 
     BtnVoltarAtras retornar = new BtnVoltarAtras();

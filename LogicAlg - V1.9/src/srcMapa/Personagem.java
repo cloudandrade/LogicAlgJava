@@ -19,12 +19,12 @@ public class Personagem {
         imagem = referencia.getImage();// "IMAGEM" VAI RECEBER A IMAGEM QUE ESTA NA PASTA
         
         this.x=680; // O PERSONAGEM VAI COMEÇAR NA POSIÇÃO X =100//posição do personagem horizontelmente
-        this.y= 720; // O PERSONAGEM VAI COMEÇAR NA POSIÇÃO Y =475//posição do personagem verticalmente
+        this.y= 745; // O PERSONAGEM VAI COMEÇAR NA POSIÇÃO Y =475//posição do personagem verticalmente
     }//posições referentes ao mapa principal
     
     public void mexer(){//PARA SE MOVIMENTAR
         
-        //System.out.println("PERSONAGEM = " + x);
+        //System.out.println("PERSONAGEM MAPA X= " + x);
         x +=dx; // A POSIÇÃO X DO PERSONAGEM VAI RECEBER X + DX ( DX É DEFINIDO PELO keyPressed )
         y +=dy; // A POSIÇÃO Y DO PERSONAGEM VAI RECEBER Y + Dy ( DY É DEFINIDO PELO keyPressed )
 
@@ -34,7 +34,7 @@ public class Personagem {
         //x=-702;//PARA QUE O PERSONAGEM NÃO SAIA PELO LADO ESQUERDO DA TELA
    }//PARA QUE O PERSONAGEM NÃO SAIA PELO LADO ESQUERDO DA TELA
    
-   if (x>=703){//PARA QUE O PERSONAGEM NÃO SAIA DO MEIO DA TELA
+   if (x>=702){//PARA QUE O PERSONAGEM NÃO SAIA DO MEIO DA TELA
        x=x-1;//PARA QUE O PERSONAGEM NÃO SAIA DO MEIO DA TELA
    }//PARA QUE O PERSONAGEM NÃO SAIA DO MEIO DA TELA
 

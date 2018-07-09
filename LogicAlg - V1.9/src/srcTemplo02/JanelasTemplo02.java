@@ -52,7 +52,7 @@ public JanelasTemplo02() {// Para construir as telas, vamos criar um contrutor d
     setTitle("Templo 02");// Este método setTitle vai permiti que seja criado um titulo para a tela.
     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);// Este método permite fechar a tela do jogo ao clicar no X na parte direita superior. 
     setUndecorated(false);
-    setSize(1280,1024);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
+    setSize(1900,980);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
    // setExtendedState(MAXIMIZED_BOTH);
     setUndecorated(false);
     setLocationRelativeTo(null);//Este método vai fazer com que a tela fique no centro da tela do pc.     

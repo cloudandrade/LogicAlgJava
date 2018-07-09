@@ -43,7 +43,7 @@ public class BotaoPortaTres extends JFrame{
   add(finalizar);
   setTitle("Conclusão Labirinto");
   setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-  setSize(1285,775);
+  setSize(1900,780);
   setLocationRelativeTo(null);
   setVisible(true);
   setResizable(false);

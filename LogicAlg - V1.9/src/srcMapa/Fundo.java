@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import srcPontos.FilaLogicAlg;
+import srcT1P1.JanelasT1P1;
 import srcTemplo01.JanelasTemplo01;
 import srcTemplo02.JanelasTemplo02;
 
@@ -53,11 +54,25 @@ public void mexer(){//PARA SE MOVIMENTAR
     x +=dx;// A POSIÇÃO X DO PERSONAGEM VAI RECEBER X + DX ( DX É DEFINIDO PELO keyPressed )
     y +=dy;// A POSIÇÃO Y DO PERSONAGEM VAI RECEBER Y + Dy ( DY É DEFINIDO PELO keyPressed )
     
-    if(x>-283){//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
-    x=-283;//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
+    if(x>-335){//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
+    x=-335;//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
     }//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
+    
+    //if(x>-11349){//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO FIM DA FASE
+   // x=-11349;//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO FIM DA FASE
+   // }//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO FIM DA FASE
+   
+    if ((y>=y)&&(y<=y)&&(x>=0-5331) && (x<=0-9777)&& (enter==1)){ 
+       // Som.play("MUSIC_FIM");
+         enter=0;
+     }  
+    
+    if ((y>=y)&&(y<=y)&&(x>=0-398) && (x<=0-5330)&& (enter==1)){ 
+        // Som.play("BGM_MAPA");
+         enter=0;
+     }  
  
-    if(x >= 0-1705 && x <= 0-1592  && enter ==1){// TEMPLO 01 //-1592 | -1705
+    if(x >= 0-1375 && x <= 0-1262  && enter ==1){// TEMPLO 01 //-1592 | -1705
    // new Templo01().show(); 
     new JanelasTemplo01();
     ConfJanela.getInstancia().setVisible(false);
@@ -66,7 +81,7 @@ public void mexer(){//PARA SE MOVIMENTAR
     enter=0;
     }
 
-    if(x <= 0-3976 && x>= 0-4082 && enter ==1){// TEMPLO 02 //-3976 |  -4082
+    if(x <= 0-3103 && x>= 0-3218 && enter ==1){// TEMPLO 02 //-3976 |  -4082
     new JanelasTemplo02().show();
     ConfJanela.getInstancia().setVisible(false);
     casadois+=1;
@@ -81,6 +96,25 @@ public void mexer(){//PARA SE MOVIMENTAR
     ordem=3;
     enter=0;
     }
+    
+   /*
+ +++++++++++++++++++++++++++++++++++++++
+
+T2: -3103 x -3218
+
+FIM: -4244 x -4332
+
+STRANGER: -5331 x -9777
+
+CASTELO: -10816 x -11252
+
+FIM: -11349
+
+ +++++++++++++++++++++++++++++++++++++++    
+    
+    */
+    
+    
 
     if(x <= 0-4536 && x>= 0-4614 && enter ==1){// casa 04 
     //new CasaQuatro().show();

@@ -58,7 +58,7 @@ public JanelasT1P1() {// Para construir as telas, vamos criar um contrutor da cl
     jt1p1.add(new FaseT1P1()); 
     jt1p1.setTitle("Nível 01 - Templo 01");// Este método setTitle vai permiti que seja criado um titulo para a tela.
     jt1p1.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);// Este método permite fechar a tela do jogo ao clicar no X na parte direita superior. 
-    jt1p1.setSize(1280,1024);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
+    jt1p1.setSize(1900,980);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
     jt1p1.setLocationRelativeTo(null);//Este método vai fazer com que a tela fique no centro da tela do pc.     
     jt1p1.setVisible(true);// Este método faz com que a tela apareça.
     jt1p1.setResizable(false);// Este método vai fazer com que o usuario não consiga alterar o tamanho da tela.

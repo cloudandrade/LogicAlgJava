@@ -42,7 +42,7 @@ public Templo01() {
     add(oplogicos);
     setTitle("TEMPLO 02");
     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-    setSize(1280,1024);
+    setSize(1900,980);
     setUndecorated(true);
     setLocationRelativeTo(null);
     setVisible(true);

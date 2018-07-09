@@ -45,7 +45,7 @@ public class BotaoMesaUm extends JFrame{
   add(finalizar);
   setTitle("Conclusão Labirinto");
   setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-  setSize(1285,775);
+  setSize(1900,980);
   setExtendedState(MAXIMIZED_BOTH);
   setLocationRelativeTo(null);
   setVisible(true);

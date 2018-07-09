@@ -22,21 +22,21 @@ public class PersonagemTemplo02 extends JFrame{
         ImageIcon imagem_pasta = new ImageIcon("src\\ImagemTemplo02\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
         this.Coord_P_x=81;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=730;//Local do personagem na tela: "linha".      
+        this.Coord_P_y=700;//Local do personagem na tela: "linha".      
     }
     
     public void andar(){ //Criar um metodo para que o personagegm ande na tela.
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.  
        
-          //System.err.println("PERSONAGEM TEMPLO 02 = " + Coord_P_x);    
+       System.err.println("PERSONAGEM TEMPLO 02 = " + Coord_P_x);    
           
        if (Coord_P_x<=29){ // Para não ultrapassar a parede esquerda. //29
        Coord_P_x=29+1;  
        }
        
-       if (Coord_P_x>=1151){ // Para não ultrapassar a parede direita.//1151
-       Coord_P_x=1151-1;  
+       if (Coord_P_x>=1801){ // Para não ultrapassar a parede direita.//1151
+       Coord_P_x=1801-1;  
        }
 //-------------Escolha PORTA ------------
 
@@ -46,43 +46,39 @@ public class PersonagemTemplo02 extends JFrame{
 //        ConfJanela.getInstancia().setVisible(true);
 //            
 //        enter=0;
-//        }              
+//        }     
+
+//-------------PT SAIDA ------------
+
+        if ((Coord_P_x>=30 ) && (Coord_P_x<=134)&& (enter==1)){ 
+       /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        }
+
 //-------------Escolha DICA ------------
 
-        if ((Coord_P_x>=1010) && (Coord_P_x<=1150)&& (enter==1)){ 
+        if ((Coord_P_x>=1506 ) && (Coord_P_x<=1598)&& (enter==1)){ 
         new BotaoDicas().show();
         enter=0;
         }
 
 //-------------Escolha mesa 01 ------------
 
-        if ((Coord_P_x>=175) && (Coord_P_x<=333)&& (enter==1)){ 
-            
-  
+        if ((Coord_P_x>=477 ) && (Coord_P_x<=570)&& (enter==1)){ 
     new JanelasT2P1().show();   
     ConfJanela.getInstancia().setVisible(false);
     enter=0;
         }
 //-------------Escolha mesa 02 ------------
-        if ((Coord_P_x>=480) && (Coord_P_x<=649)&& (enter==1)){ 
+        if ((Coord_P_x>=836 ) && (Coord_P_x<=961 )&& (enter==1)){ 
         new JanelasT2P2().show(); 
         enter=0;
         }    
 //-------------Escolha mesa 03 ------------
-        if ((Coord_P_x>=804) && (Coord_P_x<=982)&& (enter==1)){ 
+        if ((Coord_P_x>=1209) && (Coord_P_x<=1322 )&& (enter==1)){ 
         new JanelasT1P3().show();
         enter=0;
         }
-        
-    if ((Coord_P_x>=56 && Coord_P_x<=151)&& (enter==1)){     
-    
-    //new ConfJanela(); 
-   // setVisible(false);
-   // System.exit(0);
-   //dispose();
-    
-    }
-        
+       
         
        }               
                  

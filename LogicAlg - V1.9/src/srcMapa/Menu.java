@@ -1,6 +1,7 @@
 //MENU DO JOGO
 package srcMapa;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -36,18 +37,24 @@ public Menu(){
         };
 
     
-    jogar = new JButton("Novo Jogo");
-    jogar.setBounds(450, 300, 400, 50);//posição e tamanho do botão. px=da esquerda p direita,py=cima p baixo,x=largura,y=altura.
-    sobre = new JButton("Sobre");
-    sobre.setBounds(450, 400, 400, 50);
-    sair = new JButton("Sair");
-    sair.setBounds(450, 500, 400, 50);
+    jogar = new JButton("NOVO JOGO"); //jogar = new JButton("Novo Jogo");
+    jogar.setBounds(775, 207, 330, 50);//posição e tamanho do botão. px=da esquerda p direita,py=cima p baixo,x=largura,y=altura.
+    sobre = new JButton("SOBRE"); //sobre = new JButton("Sobre");
+    sobre.setBounds(775, 370, 330, 50);
+    sair = new JButton("SAIR");
+    sair.setBounds(775, 540, 330, 50);
+    
+    // aplica color transparent
+    //jbutton.setBackground(new Color(0,0,0,0));
+    jogar.setBackground(new Color(255,255,255));
+    sobre.setBackground(new Color(255,255,255));
+    sair.setBackground(new Color(255,255,255));
     
 
 
     inimenu.setUndecorated(false);//tira a barra de titulo e a possibilidade de minimizar ou fechar o programa
     inimenu.setTitle("LogicAlg - BETA");
-    inimenu.setSize(1280,1024);//coloca a altura e largura específica da resolução do monitor
+    inimenu.setSize(1900,980);//coloca a altura e largura específica da resolução do monitor
     inimenu.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);//diz se ele pode ser fechado no [x] ou não
     inimenu.setLocationRelativeTo(null);
     inimenu.setVisible(true);
@@ -103,9 +110,9 @@ public class BtnSobre implements ActionListener {
    if (e.getSource()==sobre){
        JOptionPane.showMessageDialog(null,"                                                                         LogicAlg \n "
                + "Este jogo tem como objetivo ensinar lógica de programação de forma simples e dinâmica."
-               + "\n Este Jogo Encontra-se ainda em desenvolvimento."
+               + "\n                                                            Em desenvolvimento..."
                + "\n\n"
-               + "                                    Desenvolvedores: Keven,Leonardo,Erik,Rafael,Jan Cloude",
+               + "                                    Desenvolvedores: Keven Baraúna,Leonardo Estes,Jan Cloude",
                "Sobre", JOptionPane.INFORMATION_MESSAGE);
     }          
     }
