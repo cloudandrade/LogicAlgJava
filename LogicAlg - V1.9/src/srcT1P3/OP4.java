@@ -11,12 +11,12 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
-public class Botao01 extends JFrame {
+public class OP4 extends JFrame {
     
      private JButton finalizar;
     
     
-  public Botao01() {
+  public OP4() {
           JMenuBar barramenu = new JMenuBar();
     JMenu menu = new JMenu("Menu");
     
@@ -37,12 +37,12 @@ public class Botao01 extends JFrame {
     menu.add(sair);
     barramenu.add(menu);
     setJMenuBar(barramenu); 
-  Icon Prato_Pronto = new ImageIcon("src\\ImagemT1P3\\Botao_OP_A.jpg");
+  Icon Prato_Pronto = new ImageIcon("src\\ImagemT1P3\\operrada.jpg");
   finalizar = new JButton(Prato_Pronto);
   add(finalizar);
   setTitle("Conclusão Labirinto");
   setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-  setSize(1285,775);
+  setSize(1900,980);
   setLocationRelativeTo(null);
   setVisible(true);
   setResizable(false);

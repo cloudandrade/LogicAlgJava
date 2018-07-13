@@ -21,7 +21,7 @@ public class FaseT1P3 extends JPanel implements ActionListener {
       setFocusable(true);//Para que a tela fique em foco.      
       setDoubleBuffered(true);// Sempre que a imagem seja trocada de uma forma dinamica e não de pra perseber que esta ocorrento uma troca de tela.
       addKeyListener(new Teclado());// Vai pegar os eventos de aperta e soltar o botao para criar um evento no Criador_De_Fases. 
-      ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT1P3\\FundoCasa04.jpg");// Para pegar a imagem que esta na pasta, 
+      ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT1P3\\qualvariavel.jpg");// Para pegar a imagem que esta na pasta, 
       //será criado um objeto do tipo o ImageIcon.
       imagemfase  = imagem_pasta.getImage();// A imagemfase vai receber a imagem que esta na pasta. 
       personagem = new PersonagemT1P3();

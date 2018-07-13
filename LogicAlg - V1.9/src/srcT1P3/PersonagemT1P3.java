@@ -18,14 +18,12 @@ public class PersonagemT1P3 extends JFrame{
            ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT1P3\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
         this.Coord_P_x=81;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=458;//Local do personagem na tela: "linha".
+        this.Coord_P_y=610;//Local do personagem na tela: "linha".
     }
     
   public void andar(){ //Criar um metodo para que o personagegm ande na tela.
       
       System.out.println("CASA 4 X: " + Coord_P_x);
-      System.out.println("CASA 4 Y:" + Coord_P_y);
-
       
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.  
@@ -39,29 +37,47 @@ public class PersonagemT1P3 extends JFrame{
        Coord_P_x=1158;  
        }
   
-//-------------PORTA------------
-       if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
+//-------------PORTA SAIDA------------
+       if ((Coord_P_x>=27) && (Coord_P_x<=219)&& (enter==1)){ 
        ConfJanela.getInstancia().setVisible(true);
        dispose();
         enter=0;
         }      
-//-------------Escolha 03 ------------
+//-------------Escolha 01 ------------
 
-        if ((Coord_P_x>=986) && (Coord_P_x<=1101)&& (enter==1)){ 
-        new Botao03().show();
+        if ((Coord_P_x>=805) && (Coord_P_x<=970)&& (enter==1)){ 
+        new OP1().show();
         enter=0;
         }
 //-------------Escolha 02 ------------
-        if ((Coord_P_x>=607 && Coord_P_x<=742)&& (enter==1)){ 
-        new Botao02().show();
+        if ((Coord_P_x>=1076 && Coord_P_x<=1228)&& (enter==1)){ 
+        new OP2().show();
         enter=0;
         }    
-//-------------Escolha 01 ------------
-        if ((Coord_P_x>=255 && Coord_P_x<=395)&& (enter==1)){ 
-        new Botao01().show();
+//-------------Escolha 03 ------------
+        if ((Coord_P_x>=1339 && Coord_P_x<=1493)&& (enter==1)){ 
+        new OP3().show();
         enter=0;
         }
         
+//-------------Escolha 04 ------------
+        if ((Coord_P_x>=1574 && Coord_P_x<=1748)&& (enter==1)){ 
+        new OP4().show();
+        enter=0;
+        }
+        
+//-------------FIM------------        
+        if (Coord_P_x>=1749){ 
+        Coord_P_x = 1749;
+        }
+        
+//-------------INI------------        
+        if (Coord_P_x<=25){ 
+        Coord_P_x = 25;
+        }        
+        
+       
+     
        }               
                  
      

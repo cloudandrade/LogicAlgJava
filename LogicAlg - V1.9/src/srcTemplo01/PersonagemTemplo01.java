@@ -59,7 +59,6 @@ public class PersonagemTemplo01 extends JFrame{
 
         if ((Coord_P_x>=1508) && (Coord_P_x<=1574)&& (enter==1)){ 
         new BotaoDicas().show();
-        JanelasTemplo01.getInstancia().dispose();
         enter=0;
         }
 

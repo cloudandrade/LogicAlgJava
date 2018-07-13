@@ -39,7 +39,7 @@ public class PersonagemT1P2 extends JFrame{
        if (Coord_P_x>=1705){ // Para não ultrapassar a parede esquerda do primeiro andar;
        Coord_P_x=1705;  
        }
-  
+  /*
 //-------------PORTA------------
        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
        
@@ -47,13 +47,17 @@ public class PersonagemT1P2 extends JFrame{
         Som.play("BGM_MAPA");
        JanelasT1P2.getInstancia().dispose();
         enter=0;
-        }    
+        }   */ 
        
 //-------------PT SAIDA ------------
 
         if ((Coord_P_x>=105) && (Coord_P_x<=238)&& (enter==1)){ 
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+        ConfJanela.getInstancia().setVisible(true);
+        Som.play("BGM_MAPA");
+       JanelasT1P2.getInstancia().dispose();
         enter=0;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
 //-------------Escolha 03 ------------
 

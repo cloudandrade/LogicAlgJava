@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import srcPontos.FilaLogicAlg;
+import srcPontos2.Pontinhos;
 import srcT1P1.JanelasT1P1;
 import srcTemplo01.JanelasTemplo01;
 import srcTemplo02.JanelasTemplo02;
@@ -70,8 +71,9 @@ public void mexer(){//PARA SE MOVIMENTAR
     if ((y>=y)&&(y<=y)&&(x>=0-398) && (x<=0-5330)&& (enter==1)){ 
         // Som.play("BGM_MAPA");
          enter=0;
-     }  
- 
+     } 
+    
+
     if(x >= 0-1375 && x <= 0-1262  && enter ==1){// TEMPLO 01 //-1592 | -1705
    // new Templo01().show(); 
     new JanelasTemplo01();
