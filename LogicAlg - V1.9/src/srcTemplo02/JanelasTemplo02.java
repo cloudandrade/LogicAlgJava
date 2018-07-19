@@ -8,10 +8,13 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import srcMapa.ConfJanela;
+import srcMapa.Som;
 
 
 public class JanelasTemplo02 extends JFrame {//Criar uma classe que vai abriu uma janela para o jogo.
 //Essa classe vai estender o JFrame, pra criar as telas, para estender usamos Extendes
+    
+    private static JFrame janelasTemplo2;
 
 public JanelasTemplo02() {// Para construir as telas, vamos criar um contrutor da classe, que receber métodos para configuar as janelas.
     JMenuBar barramenu = new JMenuBar();
@@ -38,6 +41,7 @@ public JanelasTemplo02() {// Para construir as telas, vamos criar um contrutor d
     public void actionPerformed(ActionEvent ae) {
     dispose();
         ConfJanela.getInstancia().setVisible(true);
+        Som.play("BGM_MAPA");
     }
     });  
 
@@ -62,4 +66,9 @@ public JanelasTemplo02() {// Para construir as telas, vamos criar um contrutor d
     
  //   setExtendedState(JFrame.MAXIMIZED_BOTH); 
     }
+
+public static JFrame getInstancia(){
+    return janelasTemplo2;
+}
+
 }

@@ -63,6 +63,8 @@ public class PersonagemT1P1 extends JFrame{
         if ((Coord_P_x>=420) && (Coord_P_x<=604)&& (enter==1)){ 
         new BotaoPortaUm().show();
         enter=0;
+       // Som.play("DING");
+        //Som.stop("DING");
         }
 //-------------Escolha Porta 02 ------------
         if ((Coord_P_x>=820 && Coord_P_x<=1006)&& (enter==1)){ 
