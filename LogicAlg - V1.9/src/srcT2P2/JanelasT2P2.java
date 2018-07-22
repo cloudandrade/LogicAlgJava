@@ -51,7 +51,7 @@ public JanelasT2P2() {
     add(new FaseT2P2());//Vai criar uma fase na janela
     setTitle("Casa 01 - Se Senão");// Este método setTitle vai permiti que seja criado um titulo para a tela.
     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);// Este método permite fechar a tela do jogo ao clicar no X na parte direita superior. 
-    setSize(1280,1024);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
+    setSize(1900,980);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
     setLocationRelativeTo(null);//Este método vai fazer com que a tela fique no centro da tela do pc.     
     setVisible(true);// Este método faz com que a tela apareça.
     setResizable(false);// Este método vai fazer com que o usuario não consiga alterar o tamanho da tela.

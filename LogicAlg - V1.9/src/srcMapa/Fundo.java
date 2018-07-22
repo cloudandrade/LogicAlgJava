@@ -38,7 +38,7 @@ public Fundo() {
 ImageIcon referencia = new ImageIcon("src\\ImagemMapa\\fase.png"); // CRIANDO A IMAGEM DO FUNDO PEGANDO A IAMGEM DA - src\\Imagens\\fase.png
 imagem = referencia.getImage();// "IMAGEM" VAI RECEBER A IMAGEM QUE ESTA NA PASTA
 
-this.x=(-398); // O FUNDO VAI COMEÇAR NA POSIÇÃO X = 0 //posição do personagem em relação ao mapa em horizontal(-398)
+this.x=(-3157); // O FUNDO VAI COMEÇAR NA POSIÇÃO X = -398 //posição do personagem em relação ao mapa em horizontal(-398)
 this.y=0;// O FUNDO VAI COMEÇAR NA POSIÇÃO Y = 0
 x=getX();
 

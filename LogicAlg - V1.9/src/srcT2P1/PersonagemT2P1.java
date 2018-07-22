@@ -45,12 +45,12 @@ PAREDE INI = 55
           ++
           */
           
-       if (Coord_P_x<=76){ // Para não ultrapassar a parede esquerda. //29
-       //Coord_P_x=76+1;  
+       if (Coord_P_x<=67){ // Para não ultrapassar a parede esquerda. //29
+       Coord_P_x=67+1;  
        }
        
-       if (Coord_P_x>=1700){ // Para não ultrapassar a parede direita.//1151
-       //Coord_P_x=1700-1;  
+       if (Coord_P_x>=1728){ // Para não ultrapassar a parede direita.//1151
+       Coord_P_x=1728-1;  
        }
      //-------------PORTA------------
        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
@@ -78,19 +78,19 @@ PAREDE INI = 55
 //-------------Escolha Porta 01 ------------
 
         if ((Coord_P_x>=420) && (Coord_P_x<=604)&& (enter==1)){ 
-        new BotaoPortaUm().show();
+        new BotaoMesaUm().show();
         enter=0;
        // Som.play("DING");
         //Som.stop("DING");
         }
 //-------------Escolha Porta 02 ------------
         if ((Coord_P_x>=820 && Coord_P_x<=1006)&& (enter==1)){ 
-        new BotaoPortaDois().show();
+        new BotaoMesaDois().show();
         enter=0;
         }    
 //-------------Escolha Porta 03 ------------
         if ((Coord_P_x>=1234 && Coord_P_x<=1413)&& (enter==1)){ 
-        new BotaoPortaTres().show();
+        new BotaoMesaTres().show();
         enter=0;
         }
 
