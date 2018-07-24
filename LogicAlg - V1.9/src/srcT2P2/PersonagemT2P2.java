@@ -4,6 +4,9 @@ import java.awt.Image;// Como vamos trabalhar com imagens, será necessario impo
 import java.awt.event.KeyEvent; //Importa classe responsavel de obter dados do teclado.
 import javax.swing.ImageIcon;// Impostado para conseguir pegar as imagens.
 import javax.swing.JFrame;
+import srcMapa.ConfJanela;
+import srcMapa.Som;
+import srcT2P1.JanelasT2P1;
 
 public class PersonagemT2P2 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -28,6 +31,15 @@ public class PersonagemT2P2 extends JFrame{
       
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela. 
+       
+        //-------------SAIDA------------
+        if ((Coord_P_y <= 750) &&(Coord_P_x>=706 && Coord_P_x<=782) &&(enter==1)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
+        ConfJanela.getInstancia().setVisible(true);
+        Som.play("BGM_MAPA");
+        JanelasT2P1.getInstancia().dispose();
+        enter=0;
+        }
+        
        
        //-------------OPÇÃO A ------------
        if(( Coord_P_x>=1332 && Coord_P_x<=1393 && (Coord_P_y==180))){ // Para não ultrapassar a parede esquerda do primeiro andar;

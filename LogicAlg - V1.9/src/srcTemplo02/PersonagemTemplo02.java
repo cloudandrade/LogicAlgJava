@@ -8,6 +8,7 @@ import srcMapa.ConfJanela;
 import srcT1P3.JanelasT1P3;
 import srcT2P1.JanelasT2P1;
 import srcT2P2.JanelasT2P2;
+import srcT2P3.JanelasT2P3;
 
 public class PersonagemTemplo02 extends JFrame{
     private int Coord_P_x,Coord_P_y;  //- Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -66,7 +67,7 @@ public class PersonagemTemplo02 extends JFrame{
         }    
 //-------------Escolha mesa 03 ------------
         if ((Coord_P_x>=1218) && (Coord_P_x<=1327 )&& (enter==1)){ 
-        new JanelasT1P3().show();
+        new JanelasT2P3().show();
         enter=0;
         }
        
