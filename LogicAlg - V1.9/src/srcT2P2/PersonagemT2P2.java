@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import srcMapa.ConfJanela;
 import srcMapa.Som;
 import srcT2P1.JanelasT2P1;
+import srcTemplo02.JanelasTemplo02;
 
 public class PersonagemT2P2 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -34,8 +35,7 @@ public class PersonagemT2P2 extends JFrame{
        
         //-------------SAIDA------------
         if ((Coord_P_y <= 750) &&(Coord_P_x>=706 && Coord_P_x<=782) &&(enter==1)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
-        ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
+        JanelasTemplo02.getInstancia().setVisible(true);
         JanelasT2P1.getInstancia().dispose();
         enter=0;
         }

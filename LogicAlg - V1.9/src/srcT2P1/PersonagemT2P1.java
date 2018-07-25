@@ -10,6 +10,7 @@ import srcT1P2.JanelasT1P2;
 import srcTemplo02.BotaoPortaDois;
 import srcTemplo02.BotaoPortaTres;
 import srcTemplo02.BotaoPortaUm;
+import srcTemplo02.JanelasTemplo02;
 
 public class PersonagemT2P1 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -54,8 +55,7 @@ PAREDE INI = 55
        }
      //-------------PORTA------------
        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
-       ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
+       JanelasTemplo02.getInstancia().setVisible(true);
        JanelasT2P1.getInstancia().dispose();
         enter=0;
         }     

@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent; //Importa classe responsavel de obter dados do t
 import javax.swing.ImageIcon;// Impostado para conseguir pegar as imagens.
 import javax.swing.JFrame;
 import srcMapa.ConfJanela;
+import srcTemplo02.JanelasTemplo02;
 
 public class PersonagemT2P3 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -39,7 +40,7 @@ public class PersonagemT2P3 extends JFrame{
   
 //-------------PORTA SAIDA------------
        if ((Coord_P_x>=27) && (Coord_P_x<=219)&& (enter==1)){ 
-       ConfJanela.getInstancia().setVisible(true);
+       JanelasTemplo02.getInstancia().setVisible(true);
        dispose();
         enter=0;
         }      

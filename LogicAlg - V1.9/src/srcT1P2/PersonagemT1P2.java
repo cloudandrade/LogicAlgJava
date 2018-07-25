@@ -6,6 +6,7 @@ import javax.swing.ImageIcon;// Impostado para conseguir pegar as imagens.
 import javax.swing.JFrame;
 import srcMapa.ConfJanela;
 import srcMapa.Som;
+import srcTemplo01.JanelasTemplo01;
 
 public class PersonagemT1P2 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -52,9 +53,7 @@ public class PersonagemT1P2 extends JFrame{
 //-------------PT SAIDA ------------
 
         if ((Coord_P_x>=105) && (Coord_P_x<=238)&& (enter==1)){ 
-            
-        ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
+        JanelasTemplo01.getInstancia().setVisible(true);
        JanelasT1P2.getInstancia().dispose();
         enter=0;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

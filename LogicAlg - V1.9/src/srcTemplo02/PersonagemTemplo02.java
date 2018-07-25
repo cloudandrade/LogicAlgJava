@@ -56,18 +56,18 @@ public class PersonagemTemplo02 extends JFrame{
 //-------------Escolha mesa 01 ------------
 
         if ((Coord_P_x>=458  ) && (Coord_P_x<=597)&& (enter==1)){ 
-    new JanelasT2P1().show();   
+    new JanelasT2P1();   
     ConfJanela.getInstancia().setVisible(false);
     enter=0;
         }
 //-------------Escolha mesa 02 ------------
         if ((Coord_P_x>=815  ) && (Coord_P_x<=956 )&& (enter==1)){ 
-        new JanelasT2P2().show(); 
+        new JanelasT2P2(); 
         enter=0;
         }    
 //-------------Escolha mesa 03 ------------
         if ((Coord_P_x>=1218) && (Coord_P_x<=1327 )&& (enter==1)){ 
-        new JanelasT2P3().show();
+        new JanelasT2P3();
         enter=0;
         }
        

@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import srcMapa.ConfJanela;
 import srcMapa.Som;
 import srcT1P2.JanelasT1P2;
+import srcTemplo01.JanelasTemplo01;
 
 public class PersonagemT1P1 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -36,17 +37,15 @@ public class PersonagemT1P1 extends JFrame{
        Coord_P_x=1700-1;  
        }
      //-------------PORTA------------
-       if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
-       ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
-       JanelasT1P1.getInstancia().dispose();
-        enter=0;
-        }     
+      // if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
+      // JanelasTemplo01.getInstancia().setVisible(true);
+      // JanelasT1P1.getInstancia().dispose();
+       // enter=0;
+       // }     
        //-------------PT SAIDA ------------
 
         if ((Coord_P_x>=114) && (Coord_P_x<=264)&& (enter==1)){ 
-        ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
+        JanelasTemplo01.getInstancia().setVisible(true);
         JanelasT1P1.getInstancia().dispose();
         enter=0;
         }
