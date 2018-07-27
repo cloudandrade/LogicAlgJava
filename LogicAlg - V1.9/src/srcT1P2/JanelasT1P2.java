@@ -55,7 +55,7 @@ public JanelasT1P2() {
     jt1p2.add(new FaseT1P2());//Vai criar uma fase na janela
     
     jt1p2.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);// Este método permite fechar a tela do jogo ao clicar no X na parte direita superior. 
-    jt1p2.setSize(1900,980);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
+    jt1p2.setSize(1366,768);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
     jt1p2.setLocationRelativeTo(null);//Este método vai fazer com que a tela fique no centro da tela do pc.     
     jt1p2.setVisible(true);// Este método faz com que a tela apareça.
     jt1p2.setResizable(false);// Este método vai fazer com que o usuario não consiga alterar o tamanho da tela.

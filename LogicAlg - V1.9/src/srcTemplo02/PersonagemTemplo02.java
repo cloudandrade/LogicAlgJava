@@ -21,7 +21,7 @@ public class PersonagemTemplo02 extends JFrame{
         ImageIcon imagem_pasta = new ImageIcon("src\\ImagemTemplo02\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
         this.Coord_P_x=81;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=700;//Local do personagem na tela: "linha".      
+        this.Coord_P_y=500;//Local do personagem na tela: "linha".      
     }
     
     public void andar(){ //Criar um metodo para que o personagegm ande na tela.
@@ -40,34 +40,37 @@ public class PersonagemTemplo02 extends JFrame{
 
 //-------------PT SAIDA ------------
 
-        if ((Coord_P_x>=30 ) && (Coord_P_x<=145)&& (enter==1)){ 
+        if ((Coord_P_x>=30 ) && (Coord_P_x<=89)&& (enter==1)){ 
         ConfJanela.getInstancia().show();
-        JanelasTemplo02.getInstancia().dispose();
+       JanelasTemplo02.getInstancia().dispose();
         enter=0;
-        }
+       }
 
 //-------------Escolha DICA ------------
 
-        if ((Coord_P_x>=1494  ) && (Coord_P_x<=1618)&& (enter==1)){ 
+        if ((Coord_P_x>=1069  ) && (Coord_P_x<=1178)&& (enter==1)){ 
         new BotaoDicas().show();
         enter=0;
         }
 
 //-------------Escolha mesa 01 ------------
 
-        if ((Coord_P_x>=458  ) && (Coord_P_x<=597)&& (enter==1)){ 
-    new JanelasT2P1().show();   
-    ConfJanela.getInstancia().setVisible(false);
-    enter=0;
-        }
+     if ((Coord_P_x>=309  ) && (Coord_P_x<=416)&& (enter==1)){ 
+        new JanelasT2P1(); 
+        JanelasTemplo02.getInstancia().dispose();
+    
+        enter=0;
+       }
 //-------------Escolha mesa 02 ------------
-        if ((Coord_P_x>=815  ) && (Coord_P_x<=956 )&& (enter==1)){ 
-        new JanelasT2P2().show(); 
+        if ((Coord_P_x>=580  ) && (Coord_P_x<=690 )&& (enter==1)){ 
+        new JanelasT2P2();
+        JanelasTemplo02.getInstancia().dispose();
         enter=0;
         }    
 //-------------Escolha mesa 03 ------------
-        if ((Coord_P_x>=1218) && (Coord_P_x<=1327 )&& (enter==1)){ 
-        new JanelasT2P3().show();
+       if ((Coord_P_x>=852) && (Coord_P_x<=955 )&& (enter==1)){ 
+        new JanelasT2P3();
+        JanelasTemplo02.getInstancia().dispose();
         enter=0;
         }
        
@@ -128,7 +131,7 @@ public class PersonagemTemplo02 extends JFrame{
        
     }
      if (aperte_enter == KeyEvent.VK_ENTER){
-        
+         System.out.println(Coord_P_x);
          enter = 0;      
     }      
     

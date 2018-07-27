@@ -38,11 +38,11 @@ public Menu(){
 
     
     jogar = new JButton("NOVO JOGO"); //jogar = new JButton("Novo Jogo");
-    jogar.setBounds(775, 207, 330, 50);//posição e tamanho do botão. px=da esquerda p direita,py=cima p baixo,x=largura,y=altura.
+    jogar.setBounds(560, 158, 230, 50);//posição e tamanho do botão. px=da esquerda p direita,py=cima p baixo,x=largura,y=altura.
     sobre = new JButton("SOBRE"); //sobre = new JButton("Sobre");
-    sobre.setBounds(775, 370, 330, 50);
+    sobre.setBounds(560, 285, 230, 50);
     sair = new JButton("SAIR");
-    sair.setBounds(775, 540, 330, 50);
+    sair.setBounds(560, 418, 230, 50);
     
     // aplica color transparent
     //jbutton.setBackground(new Color(0,0,0,0));
@@ -52,7 +52,7 @@ public Menu(){
     
 
 
-    inimenu.setUndecorated(false);//tira a barra de titulo e a possibilidade de minimizar ou fechar o programa
+    inimenu.setUndecorated(true);//tira a barra de titulo e a possibilidade de minimizar ou fechar o programa
     inimenu.setTitle("LogicAlg - BETA");
     inimenu.setSize(1900,980);//coloca a altura e largura específica da resolução do monitor
     inimenu.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);//diz se ele pode ser fechado no [x] ou não
@@ -83,9 +83,8 @@ public class BtnJogar implements ActionListener {
    public void actionPerformed( ActionEvent e ){
 
    if (e.getSource()==jogar){
-     new InicioMapa(); //instanciando a classe meu frame para poder usar os metodos dela.
-     trocatela = InicioMapa.getInstancia(); 
-     trocatela.show();
+     
+     new JFJogador().show();
      inimenu.dispose();
     }          
     }

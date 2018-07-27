@@ -34,6 +34,7 @@ public class Fase extends JPanel implements ActionListener { //CLASSE FASE - PAR
         tempo.start();//INICINADO ESSE TEMPO
         Som.play("BGM_MAPA");
        
+       
         
     }
     

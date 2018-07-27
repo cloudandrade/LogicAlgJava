@@ -34,16 +34,16 @@ public InicioMapa(){
 //btninicio.setBackground(new Color(0,0,0,0));
 
     btninicio = new JButton(">>");//btninicio = new JButton(">>");
-    btninicio.setBounds(1780, 505, 50, 50);//X - Y - TAMNHO LARG - TAMNHO ALT
+    btninicio.setBounds(1268,365, 60, 35);//X - Y - TAMNHO LARG - TAMNHO ALT
     btnvoltarMenu = new JButton("<<");//btnvoltarMenu = new JButton("<<");
-    btnvoltarMenu.setBounds(45, 505, 50, 50);//
+    btnvoltarMenu.setBounds(35, 364, 60, 35);//
     
     btninicio.setBackground(new Color(255,255,255));
     btnvoltarMenu.setBackground(new Color(255,255,255));
     
     inimapa.setTitle("LogicAlg - BETA");
-    inimapa.setSize(1900,980);
-    inimapa.setUndecorated(false);
+    inimapa.setSize(1366,768);
+    inimapa.setUndecorated(true);
     inimapa.setDefaultCloseOperation(EXIT_ON_CLOSE);
     inimapa.setLocationRelativeTo(null);
     inimapa.setVisible(true);

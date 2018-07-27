@@ -42,7 +42,8 @@ public class OP4 extends JFrame {
   add(finalizar);
   setTitle("Conclusão Labirinto");
   setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-  setSize(1900,980);
+   setSize(1366,768);
+  setUndecorated(true);
   setLocationRelativeTo(null);
   setVisible(true);
   setResizable(false);

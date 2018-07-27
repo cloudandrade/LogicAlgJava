@@ -20,7 +20,7 @@ public class PersonagemTemplo01 extends JFrame{
         ImageIcon imagem_pasta = new ImageIcon("src\\ImagemTemplo01\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
         this.Coord_P_x=81;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=700;//Local do personagem na tela: "linha".      
+        this.Coord_P_y=500;//Local do personagem na tela: "linha".      
     }
     
     public void andar(){ //Criar um metodo para que o personagegm ande na tela.
@@ -57,27 +57,27 @@ public class PersonagemTemplo01 extends JFrame{
 
 //-------------Escolha DICA ------------
 
-        if ((Coord_P_x>=1508) && (Coord_P_x<=1574)&& (enter==1)){ 
-        new BotaoDicas().show();
+        if ((Coord_P_x>=1071) && (Coord_P_x<=1177)&& (enter==1)){ 
+        new BotaoDicas();
         enter=0;
         }
 
 //-------------Escolha PT 01 ------------
 
-        if ((Coord_P_x>=461 ) && (Coord_P_x<=623)&& (enter==1)){ 
-        new JanelasT1P1();  
+        if ((Coord_P_x>=305 ) && (Coord_P_x<=435)&& (enter==1)){ 
+        new JanelasT1P1();
         JanelasTemplo01.getInstancia().dispose();
         enter=0;
         }
 //-------------Escolha PT 02 ------------
-        if ((Coord_P_x>=818) && (Coord_P_x<=984)&& (enter==1)){ 
+        if ((Coord_P_x>=568) && (Coord_P_x<=725) && (enter==1)){ 
         new JanelasT1P2();
-        dispose();
+        JanelasTemplo01.getInstancia().dispose();
         enter=0;
         }    
 //-------------Escolha PT 03 ------------
-        if ((Coord_P_x>=1220) && (Coord_P_x<=1367)&& (enter==1)){ 
-        new JanelasT1P3().show();
+        if ((Coord_P_x>=818) && (Coord_P_x<=1005)&& (enter==1)){ 
+        new JanelasT1P3();
         JanelasTemplo01.getInstancia().dispose();
         enter=0;
         }
@@ -139,7 +139,7 @@ public class PersonagemTemplo01 extends JFrame{
        
     }
      if (aperte_enter == KeyEvent.VK_ENTER){
-        
+         
          enter = 0;      
     }      
     

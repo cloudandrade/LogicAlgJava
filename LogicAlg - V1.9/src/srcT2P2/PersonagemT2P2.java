@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import srcMapa.ConfJanela;
 import srcMapa.Som;
 import srcT2P1.JanelasT2P1;
+import srcTemplo02.JanelasTemplo02;
 
 public class PersonagemT2P2 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -14,176 +15,141 @@ public class PersonagemT2P2 extends JFrame{
     private Image imagempersonagem; // Criar a imagem do personagem da classe Image
     private int enter=0;
     private int escada;
+    private static int t2p1con = 0;
+    private static int t2p2con = 0;
+    private static int pontost2p2 = 0;
     
     public PersonagemT2P2() { // Terá que criar um cnstrutor para que a imagem apareça e o local onde ela vai ficar na tela. 
         //Foi criada uma pasta com as imagem que vai ser colocadas no jogo.
-           ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT2P2\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
+        ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT2P2\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
-        this.Coord_P_x=784;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=750;//Local do personagem na tela: "linha".
+        this.Coord_P_x=534;//Local do personagem na tela: "coluna".
+        this.Coord_P_y=553;//Local do personagem na tela: "linha".
     }
     
   public void andar(){ //Criar um metodo para que o personagegm ande na tela.
       
-      System.out.println("X" + Coord_P_x);
-      System.out.println("Y" + Coord_P_y);
+      //System.out.println("X" + Coord_P_x);
+      //System.out.println("Y" + Coord_P_y);
 
       
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela. 
        
         //-------------SAIDA------------
-        if ((Coord_P_y <= 750) &&(Coord_P_x>=706 && Coord_P_x<=782) &&(enter==1)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
-        ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
-        JanelasT2P1.getInstancia().dispose();
+        if ((Coord_P_y <= 553) &&(Coord_P_x>=486 && Coord_P_x<=564) &&(enter==1)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
+        new JanelasTemplo02();
+        dispose();
         enter=0;
         }
         
        
-       //-------------OPÇÃO A ------------
-       if(( Coord_P_x>=1332 && Coord_P_x<=1393 && (Coord_P_y==180))){ // Para não ultrapassar a parede esquerda do primeiro andar;
-        if(enter == 1){
-         new OpA().show();
-        enter=0;
-        }
-       }
-       
-       //-------------OPÇÃO B ------------
-       if ((Coord_P_x>=1496)&& (Coord_P_x<=1562 ) && (Coord_P_y==180)){ // Para não ultrapassar a parede esquerda do primeiro andar;
-            if(enter == 1){
-       new OpB().show();
-        enter=0;
-       }
-       }
+ 
        
        //PAREDE PARTE DE BAIXO
                    
-       if ((Coord_P_x<=599)&& (Coord_P_y==750)){ // Para não ultrapassar a parede esquerda do primeiro andar;
-       Coord_P_x=599+1;  
+      if ((Coord_P_x<=433)&& (Coord_P_y==553)){ // Para não ultrapassar a parede esquerda do primeiro andar;
+       Coord_P_x=433+1;  
        }
        
-       if ((Coord_P_x>=1749)&& (Coord_P_y==750)){ // Para não ultrapassar a parede esquerda do primeiro andar;
-       Coord_P_x=1749-1;  
+       if ((Coord_P_x>=1238)&& (Coord_P_y==553)){ // Para não ultrapassar a parede esquerda do primeiro andar;
+       Coord_P_x=1238-1;  
        }
        
-       if (Coord_P_y>750){ // Para não ultrapassar o chao 569
-       Coord_P_y=750;  
-       }
+     if (Coord_P_y>553){ // Para não ultrapassar o chao 569
+      Coord_P_y=553;  
+      }
        
 //-------------ESCADA BAIXO ------------
-        if ((Coord_P_y <= 750) &&(Coord_P_x>=1139 && Coord_P_x<=1209)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
-        escada = 1; 
-        }
-        if ((Coord_P_y <= 750) &&(Coord_P_x<=1139 || Coord_P_x>=1209)){ //CHEGOU NO TOPO DA ESCADA
-        escada = 0; 
-        }
-        
-        if((Coord_P_y < 454) &&(Coord_P_x >= 1139 && Coord_P_x <= 1209)){ //CHEGOU NO TOPO DA ESCADA PODE IR PRA BAIXO
+       if ((Coord_P_y <= 553) &&(Coord_P_x>=809 && Coord_P_x<=863)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
+     //   escada = 1; 
+      escada = 1; 
+     }
+       if ((Coord_P_y <= 326) &&(Coord_P_x<=809 || Coord_P_x>=863)){ //CHEGOU NO TOPO DA ESCADA
+       escada = 0; 
+       }
+//        
+    if((Coord_P_y < 326) &&(Coord_P_x >= 809 && Coord_P_x <= 863)){ //CHEGOU NO TOPO DA ESCADA PODE IR PRA BAIXO
         escada = 1;  
         }
-        if((Coord_P_y < 454) &&(Coord_P_x >= 1139 && Coord_P_x <= 1209)){//SE TENTAR SUBIR MAIS DOQ A ESCADA
-        Coord_P_y = 454; 
+        if((Coord_P_y < 326) &&(Coord_P_x >= 809 && Coord_P_x <= 863)){//SE TENTAR SUBIR MAIS DOQ A ESCADA
+       Coord_P_y = 326; 
         }
         
-        if (((Coord_P_y < 750) && (Coord_P_y > 454)) && ((Coord_P_x < 1139) || (Coord_P_x > 1209))){ //SAIU DA ESCADA
-        Coord_P_y = 750; 
-        }
-        
-        
-        //PAREDE PARTE DE MEDIO
-       if ((Coord_P_x<=692)&& (Coord_P_y==454)){ // Para não ultrapassar a parede esquerda do primeiro andar;
-       Coord_P_x=692+1;  
+    if (((Coord_P_y < 553) && (Coord_P_y > 326)) && ((Coord_P_x < 809) || (Coord_P_x > 863))){ //SAIU DA ESCADA
+       Coord_P_y = 553; 
+       }
+     
+       
+       //PAREDE PARTE DE MEDIO
+      if ((Coord_P_x<=597)&& (Coord_P_y==326)){ // Para não ultrapassar a parede esquerda do primeiro andar;
+       Coord_P_x=597+1;  
+       }
+      
+     if ((Coord_P_x>=1236)&& (Coord_P_y==326)){ // Para não ultrapassar a parede direita do primeiro andar;
+      Coord_P_x=1236-1;  
        }
        
-       if ((Coord_P_x>=1749)&& (Coord_P_y==454)){ // Para não ultrapassar a parede esquerda do primeiro andar;
-       Coord_P_x=1749-1;  
-       }
-       
-        //-------------ESCADA MEDIO ------------
-        if ((Coord_P_y <= 454) &&(Coord_P_x>=1649 && Coord_P_x<=1738)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
+//        //-------------ESCADA MEDIO ------------
+        if ((Coord_P_y <= 326) &&(Coord_P_x>=1212 && Coord_P_x<=1236)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
         escada = 1; 
-        }
+        } //habilita o personagem de poder subir a escada do meio, quando estiver entre as duas cordenadas de x.
         
-        if (((Coord_P_y < 454) && (Coord_P_y > 750)) && ((Coord_P_x>=1649 && Coord_P_x<=1738))){ //CHEGOU NA PARTE DE BAIXO DA ESCADA !!!!!!!!!!!!! BUG
-        Coord_P_y = 454; 
-        escada = 0; 
-        }
- 
-        if((Coord_P_y < 180) &&(Coord_P_x >= 1649 && Coord_P_x <= 1738)){//SE TENTAR SUBIR MAIS DOQ A ESCADA
-        Coord_P_y = 180; 
-        }
-        
-        if (((Coord_P_y < 454) && (Coord_P_y > 180)) && ((Coord_P_x < 1649) || (Coord_P_x > 1738))){ //SAIU DA ESCADA
-        Coord_P_y = 180; 
-        }
-        
-       if ((Coord_P_x<=1226)&& (Coord_P_y==180)){ // Para não ultrapassar a parede DIREITA do primeiro andar;
-       Coord_P_x=1226+1;  
-       }
-       
-       if ((Coord_P_x>=1743)&& (Coord_P_y==180)){ // Para não ultrapassar a parede esquerda do primeiro andar;
-      // Coord_P_x=1743-1;  
-       }
-       
-       
-        //casa02
-        
-       if ((Coord_P_x<=489)&& (Coord_P_y==370)){ // Para não ultrapassar a parede esquerda do segundo andar;
-       //Coord_P_x=489+1;  
-       }
-       
-       if ((Coord_P_x>=1210)&& (Coord_P_y==370)){ // Para não ultrapassar a parede esquerda do segundo andar;
-      // Coord_P_x=1210-1;  
-       }
-       
-       if (Coord_P_y>569){ // Para não ultrapassar o chao
-     //  Coord_P_y=372;  
-       }
-       
-        //apagar
-        if ((Coord_P_y > 370 && Coord_P_y != 569) &&(Coord_P_x<=803 || Coord_P_x>=840)){ 
-        //Coord_P_y = 370; 
-        }
-        
-       
-       
-       //casa03
-        
-       if ((Coord_P_x<=841)&& (Coord_P_y==174)){ // Para não ultrapassar a parede esquerda do segundo andar;
-     //  Coord_P_x=841+1;  
-       }
-       
-       if ((Coord_P_x>=1212)&& (Coord_P_y==174)){ // Para não ultrapassar a parede esquerda do segundo andar;
-    //   Coord_P_x=1212-1;  
-       }
-             
-//-------------Escolha DICA ------------
+   if (((Coord_P_y < 553) && (Coord_P_y > 326)) && ((Coord_P_x>=1212 && Coord_P_x<=1236))){ //CHEGOU NA PARTE DE cima DA ESCADA !!!!!!!!!!!!! BUG
+        Coord_P_y = 553; 
+       escada = 0; 
+        }//impede que o personagem suba mais do que o necessário na escada.
 
-        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=1034) && (Coord_P_x<=1150)&& (enter==1)){ 
-      // new BotaoDicas().show();
-        enter=0;
+       if((Coord_P_y < 102) &&(Coord_P_x >= 1212 && Coord_P_x <= 1236)){//SE TENTAR SUBIR MAIS DOQ A ESCADA
+        Coord_P_y = 102; 
+        }
+        
+       if (((Coord_P_y < 102) && (Coord_P_y > 326)) && ((Coord_P_x < 1212) || (Coord_P_x > 1236))){ //SAIU DA ESCADA
+        Coord_P_y = 326; 
+       }//faz com que o personagem caia no chão se ir para o lado da escada
+//      
+
+        if (((Coord_P_y < 326) && (Coord_P_y > 102)) && ((Coord_P_x < 1212) || (Coord_P_x > 1236))){ //SAIU DA ESCADA
+        Coord_P_y = 326; 
         }
 
-//-------------Escolha Porta 01 ------------
+       if ((Coord_P_x<=964)&& (Coord_P_y==102)){ // Para não ultrapassar a parede DIREITA do primeiro andar;
+       Coord_P_x=964+1;  
+       }
+//       
+      if ((Coord_P_x>=1238)&& (Coord_P_y==102)){ // Para não ultrapassar a parede esquerda do primeiro andar;
+       Coord_P_x=1238-1;  
+       }
+       
+       
+       
 
-        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=271) && (Coord_P_x<=432)&& (enter==1)){ 
-        //new PortaUm().show();
+      //-------------OPÇÃO A ------------
+     if (t2p1con == 0){
+      if(( Coord_P_x>=965 && Coord_P_x<=990 && (Coord_P_y==102))){ // Para não ultrapassar a parede esquerda do primeiro andar;
+       if(enter == 1){
+         new OpA().show();
         enter=0;
+        pontost2p2-=10; //atribuição de pontos sempre deve ser += para acrescentar em vez de substituir  
+        t2p1con += 1;
         }
-//-------------Escolha Porta 02 ------------
-        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=542 && Coord_P_x<=726)&& (enter==1)){ 
-        //new PortaDois().show();
+       }
+     }
+       //-------------OPÇÃO B ------------
+      if (t2p2con == 0){
+       
+       if ((Coord_P_x>=1063)&& (Coord_P_x<=1124 ) && (Coord_P_y==102)){ // Para não ultrapassar a parede esquerda do primeiro andar;
+            if(enter == 1){
+       new OpB().show();
         enter=0;
-        }    
-//-------------Escolha Porta 03 ------------
-        if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=821 && Coord_P_x<=987)&& (enter==1)){ 
-        //new PortaTres().show();
-        enter=0;
+        pontost2p2+=30; //atribuição de pontos sempre deve ser += para acrescentar em vez de substituir  
+        t2p2con += 1;
+                }
+            }
         }
-        
-       }               
-                 
+    
+  }  //fim da função andar             
+              
      
 
     public int getCoord_P_x() {// Será necessario pegar as Coordenadas do personagem getCoord_P_x.
@@ -266,11 +232,14 @@ public class PersonagemT2P2 extends JFrame{
     }    
     /////////////////////////////////////////////////////////////////////////////
      if (aperte_enter == KeyEvent.VK_ENTER){
-     enter = 0;      
+         
+         enter = 0;      
     }      
     
     
-    }        
+    } 
+    
+    public static int getInstancia(){
+        return pontost2p2;
+    }
 }
-
-

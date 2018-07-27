@@ -4,8 +4,11 @@ import java.awt.Image;// Como vamos trabalhar com imagens, será necessario impo
 import java.awt.event.KeyEvent; //Importa classe responsavel de obter dados do teclado.
 import javax.swing.ImageIcon;// Impostado para conseguir pegar as imagens.
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import srcMapa.ConfJanela;
 import srcMapa.Som;
+import srcT1P1.PersonagemT1P1;
+import srcTemplo01.JanelasTemplo01;
 
 public class PersonagemT1P2 extends JFrame{
     private int Coord_P_x,Coord_P_y; // Coordenadas do Personagem= Coord_P, coluna=x, linha=y
@@ -13,13 +16,17 @@ public class PersonagemT1P2 extends JFrame{
     private Image imagempersonagem; // Criar a imagem do personagem da classe Image
     private int enter=0;
     private int escada;
+    private static int t1p1con = 0;
+    private static int t1p2con = 0;
+    private static int t1p3con = 0;
+    private static int pontost1p2 = 0;
     
     public PersonagemT1P2() { // Terá que criar um cnstrutor para que a imagem apareça e o local onde ela vai ficar na tela. 
         //Foi criada uma pasta com as imagem que vai ser colocadas no jogo.
            ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT1P2\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
         this.Coord_P_x=81;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=610;//Local do personagem na tela: "linha".
+        this.Coord_P_y=417;//Local do personagem na tela: "linha".
     }
     
   public void andar(){ //Criar um metodo para que o personagegm ande na tela.
@@ -39,44 +46,69 @@ public class PersonagemT1P2 extends JFrame{
        if (Coord_P_x>=1705){ // Para não ultrapassar a parede esquerda do primeiro andar;
        Coord_P_x=1705;  
        }
-  /*
-//-------------PORTA------------
-       if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
-       
-       ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
-       JanelasT1P2.getInstancia().dispose();
-        enter=0;
-        }   */ 
-       
+  
 //-------------PT SAIDA ------------
 
-        if ((Coord_P_x>=105) && (Coord_P_x<=238)&& (enter==1)){ 
-            
-        ConfJanela.getInstancia().setVisible(true);
-        Som.play("BGM_MAPA");
+        if ((Coord_P_x>=57) && (Coord_P_x<=195)&& (enter==1)){ 
+           
+       JanelasTemplo01.getInstancia().setVisible(true);
+       System.out.println(pontost1p2 + PersonagemT1P1.getInstancia());
        JanelasT1P2.getInstancia().dispose();
-        enter=0;
+       enter=0;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
-//-------------Escolha 03 ------------
+        
+//-------------Escolha 01 ------------
+      if (t1p1con == 0){//comparador que verifica se o jogador já utilizou aquela opção
+            //se o comparador da porta for 0, ele não utilizou e pode mostrar o botão e computar pontos 
 
-        if ((Coord_P_x>=1505) && (Coord_P_x<=1628)&& (enter==1)){ 
-        new Botao03().show();
-        enter=0;
-        }
+            if ((Coord_P_x>=290 && Coord_P_x<=460)&& (enter==1)){ 
+            new Botao01().show();
+            enter=0;
+            t1p1con = 1;
+            pontost1p2+=7;
+            }
+      } 
+//      else if((t1p1con > 0) && (enter == 1)){//se o comparador for > 0 quando ele apertar enter na porta, não poderá utilizar a porta mais
+//            JOptionPane.showMessageDialog(null, "\n \n \n Você já escolheu esta opção, Não poderá escolher esta mesma opção novamente \n \n \n ");
+//            enter = 0;
+//            
+//        }
+
 //-------------Escolha 02 ------------
-        if ((Coord_P_x>=960 && Coord_P_x<=1061)&& (enter==1)){ 
+      if (t1p2con == 0){   
+
+        if ((Coord_P_x>=662 && Coord_P_x<=833)&& (enter==1)){ 
         new Botao02().show();
         enter=0;
-        }    
-//-------------Escolha 01 ------------
-        if ((Coord_P_x>=425 && Coord_P_x<=550)&& (enter==1)){ 
-        new Botao01().show();
-        enter=0;
+        t1p2con = 1;
+        pontost1p2+=7;
         }
         
-       }               
+      } 
+//      else if((t1p2con > 0) && (enter == 1)){
+//           JOptionPane.showMessageDialog(null, "\n \n \n Você já escolheu esta opção, Não poderá escolher esta mesma opção novamente \n \n \n ");
+//            enter = 0;
+//  
+//      }
+
+//-------------Escolha 03 ------------
+  if (t1p3con == 0){      
+
+        if ((Coord_P_x>=1016) && (Coord_P_x<=1217)&& (enter==1)){ 
+        new Botao03().show();
+        enter=0;
+        t1p3con = 1;
+        pontost1p2+=30;
+        }
+   } 
+//  else if((t1p3con > 0) && (enter == 1)){
+//            JOptionPane.showMessageDialog(null, "\n \n \n Você já escolheu esta opção, Não poderá escolher esta mesma opção novamente \n \n \n ");
+//            enter = 0;
+//   }
+
+        
+       } //fim da função andar              
                  
      
 
@@ -160,11 +192,15 @@ public class PersonagemT1P2 extends JFrame{
     }    
     /////////////////////////////////////////////////////////////////////////////
      if (aperte_enter == KeyEvent.VK_ENTER){
-     enter = 0;      
+         enter = 0;      
     }      
     
     
-    }        
+    }  
+    
+    public static int getInstancia(){
+        return pontost1p2;
+    }
 }
 
 

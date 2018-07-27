@@ -34,16 +34,16 @@ public Objetivos() {
     //add(Objetivos);
     janelaobj.setTitle("LogicAlg - BETA");
     janelaobj.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    janelaobj.setSize(1900,980);//
+    janelaobj.setSize(1366,768);//
     //desktop.setSize(1280,720);//coloca a altura e largura específica da resolução do monitor
-    janelaobj.setUndecorated(false);
+    janelaobj.setUndecorated(true);
     janelaobj.setLocationRelativeTo(null);
     janelaobj.setVisible(true);
     janelaobj.setResizable(true);
     prox = new JButton(">>");
-    prox.setBounds(1780, 505, 50, 50);//
+    prox.setBounds(1268,365, 60, 35);//
     btnvoltar = new JButton("<<");
-    btnvoltar.setBounds(45, 505, 50, 50);//
+    btnvoltar.setBounds(35, 364, 60, 35);//
     
     btnvoltar.setBackground(new Color(255,255,255));
     prox.setBackground(new Color(255,255,255));

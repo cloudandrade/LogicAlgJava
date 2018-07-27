@@ -55,14 +55,15 @@ public JanelasT2P1() {// Para construir as telas, vamos criar um contrutor da cl
     barramenu.add(opcoes);
     jt2p1.setJMenuBar(barramenu);   
 
-    jt2p1.add(new FaseT2P1()); 
-    jt2p1.setTitle("Nível 01 - Templo 01");// Este método setTitle vai permiti que seja criado um titulo para a tela.
+    jt2p1.add(new FaseT2P1());
     jt2p1.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);// Este método permite fechar a tela do jogo ao clicar no X na parte direita superior. 
-    jt2p1.setSize(1900,980);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
+    jt2p1.setUndecorated(true);
+    jt2p1.setSize(1366,768);// Este método vai criar o tamalho da janela, neste caso x=coluna e y=linha, nesta ordem
     jt2p1.setLocationRelativeTo(null);//Este método vai fazer com que a tela fique no centro da tela do pc.     
     jt2p1.setVisible(true);// Este método faz com que a tela apareça.
     jt2p1.setResizable(false);// Este método vai fazer com que o usuario não consiga alterar o tamanho da tela.
-    }
+    
+}
 
 public static JFrame getInstancia(){
     return jt2p1;

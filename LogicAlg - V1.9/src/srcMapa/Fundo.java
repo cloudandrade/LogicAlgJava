@@ -84,20 +84,20 @@ public void mexer(){//PARA SE MOVIMENTAR
     }
 
     if(x <= 0-3103 && x>= 0-3218 && enter ==1){// TEMPLO 02 //-3976 |  -4082
-    new JanelasTemplo02().show();
+    new JanelasTemplo02();
     ConfJanela.getInstancia().setVisible(false);
     casadois+=1;
     ordem=2;
     enter=0;
     }
 
-    if(x <= 0-3406 && x>= 0-3482 && enter ==1){// casa 03 
+    //if(x <= 0-3406 && x>= 0-3482 && enter ==1){// casa 03 
     //new CasaTres().show();
-    ConfJanela.getInstancia().setVisible(false);
-    casatres+=1;
-    ordem=3;
-    enter=0;
-    }
+    //ConfJanela.getInstancia().setVisible(false);
+    //casatres+=1;
+    //ordem=3;
+    //enter=0;
+   // }
     
    /*
  +++++++++++++++++++++++++++++++++++++++

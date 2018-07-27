@@ -12,18 +12,24 @@ public class PersonagemT2P3 extends JFrame{
     private Image imagempersonagem; // Criar a imagem do personagem da classe Image
     private int enter=0;
     private int escada;
+     private static int t2p1con = 0;
+    private static int t2p2con = 0;
+    private static int t2p3con = 0;
+    private static int t2p4con = 0;
+    private static int pontost2p3 = 0;
+    
     
     public PersonagemT2P3() { // Terá que criar um cnstrutor para que a imagem apareça e o local onde ela vai ficar na tela. 
         //Foi criada uma pasta com as imagem que vai ser colocadas no jogo.
            ImageIcon imagem_pasta = new ImageIcon("src\\ImagemT2P3\\direito.png");// Para pegar a imagem que esta na pasta, será criado um objeto do tipo o ImageIcon.
         imagempersonagem = imagem_pasta.getImage();// A imagempersonagem vai receber a imagem que esta na pasta. 
         this.Coord_P_x=81;//Local do personagem na tela: "coluna".
-        this.Coord_P_y=610;//Local do personagem na tela: "linha".
+        this.Coord_P_y=430;//Local do personagem na tela: "linha".
     }
     
   public void andar(){ //Criar um metodo para que o personagegm ande na tela.
       
-      System.out.println("CASA 4 X: " + Coord_P_x);
+      //System.out.println("CASA 4 X: " + Coord_P_x);
       
        Coord_P_x += Coord_M_x; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela.  
@@ -33,8 +39,8 @@ public class PersonagemT2P3 extends JFrame{
        Coord_P_x=28;  
        }
        
-       if ((Coord_P_x>=1158)&& (Coord_P_y==569)){ // Para não ultrapassar a parede esquerda do primeiro andar;
-       Coord_P_x=1158;  
+       if ((Coord_P_x>=1220)&& (Coord_P_y==569)){ // Para não ultrapassar a parede esquerda do primeiro andar;
+       Coord_P_x=1220;  
        }
   
 //-------------PORTA SAIDA------------
@@ -44,28 +50,53 @@ public class PersonagemT2P3 extends JFrame{
         enter=0;
         }      
 //-------------Escolha 01 ------------
+if (t2p1con == 0){
+    
 
-        if ((Coord_P_x>=805) && (Coord_P_x<=970)&& (enter==1)){ 
+       if ((Coord_P_x>=556) && (Coord_P_x<=677)&& (enter==1)){ 
         new OP1().show();
         enter=0;
+        pontost2p3-=11; //atribuição de pontos sempre deve ser += para acrescentar em vez de substituir  
+        t2p1con += 1;
         }
+       
+       }
 //-------------Escolha 02 ------------
-        if ((Coord_P_x>=1076 && Coord_P_x<=1228)&& (enter==1)){ 
+ if (t2p2con == 0){        
+
+        if ((Coord_P_x>=763 && Coord_P_x<=868)&& (enter==1)){ 
         new OP2().show();
         enter=0;
+        pontost2p3-=11; //atribuição de pontos sempre deve ser += para acrescentar em vez de substituir  
+        t2p2con += 1;
         }    
+        
+         } 
 //-------------Escolha 03 ------------
-        if ((Coord_P_x>=1339 && Coord_P_x<=1493)&& (enter==1)){ 
+      if (t2p3con == 0){
+        if ((Coord_P_x>=950 && Coord_P_x<=1046)&& (enter==1)){ 
         new OP3().show();
         enter=0;
+        pontost2p3+=50; //atribuição de pontos sempre deve ser += para acrescentar em vez de substituir  
+        t2p3con += 1;
+        
         }
+        
+         }
+      
         
 //-------------Escolha 04 ------------
-        if ((Coord_P_x>=1574 && Coord_P_x<=1748)&& (enter==1)){ 
+       if (t2p4con == 0){
+
+        if ((Coord_P_x>=1124 && Coord_P_x<=1218)&& (enter==1)){ 
         new OP4().show();
         enter=0;
+        pontost2p3-=11; //atribuição de pontos sempre deve ser += para acrescentar em vez de substituir  
+        t2p4con += 1;
+        
         }
         
+       }
 //-------------FIM------------        
         if (Coord_P_x>=1749){ 
         Coord_P_x = 1749;
@@ -162,11 +193,16 @@ public class PersonagemT2P3 extends JFrame{
     }    
     /////////////////////////////////////////////////////////////////////////////
      if (aperte_enter == KeyEvent.VK_ENTER){
+         System.out.println(Coord_P_x);
      enter = 0;      
     }      
     
     
-    }        
+    }   
+    
+    public static int getInstancia(){
+        return pontost2p3;
+    }
 }
 
 

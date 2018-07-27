@@ -19,7 +19,7 @@ public class Personagem {
         imagem = referencia.getImage();// "IMAGEM" VAI RECEBER A IMAGEM QUE ESTA NA PASTA
         
         this.x=680; // O PERSONAGEM VAI COMEÇAR NA POSIÇÃO X =100//posição do personagem horizontelmente
-        this.y= 745; // O PERSONAGEM VAI COMEÇAR NA POSIÇÃO Y =475//posição do personagem verticalmente
+        this.y= 480; // O PERSONAGEM VAI COMEÇAR NA POSIÇÃO Y =475//posição do personagem verticalmente
     }//posições referentes ao mapa principal
     
     public void mexer(){//PARA SE MOVIMENTAR
