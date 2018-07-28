@@ -6,9 +6,12 @@ import javax.swing.ImageIcon;// Impostado para conseguir pegar as imagens.
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import srcMapa.ConfJanela;
+<<<<<<< HEAD
 import srcMapa.JFJogador;
 import srcT1P1.PersonagemT1P1;
 import srcT1P2.PersonagemT1P2;
+=======
+>>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
 import srcTemplo01.JanelasTemplo01;
 
 public class PersonagemT1P3 extends JFrame{
@@ -48,12 +51,18 @@ public class PersonagemT1P3 extends JFrame{
        }
   
 //-------------PORTA SAIDA------------
+<<<<<<< HEAD
        if ((Coord_P_x>=25) && (Coord_P_x<=154)&& (enter==1)){ 
        JanelasTemplo01.getInstancia().setVisible(true);
        JanelasT1P3.getInstancia().dispose();
        System.out.print(pontost1p3 + "\t\t\t");    
        System.out.print("nome do jogador:" + JFJogador.getInstancia());
        
+=======
+       if ((Coord_P_x>=27) && (Coord_P_x<=219)&& (enter==1)){ 
+       JanelasTemplo01.getInstancia().setVisible(true);
+       dispose();
+>>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
         enter=0;
         }      
 //-------------Escolha 01 ------------

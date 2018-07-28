@@ -76,7 +76,11 @@ public class PersonagemTemplo01 extends JFrame{
         enter=0;
         }    
 //-------------Escolha PT 03 ------------
+<<<<<<< HEAD
         if ((Coord_P_x>=818) && (Coord_P_x<=1005)&& (enter==1)){ 
+=======
+        if ((Coord_P_x>=1220) && (Coord_P_x<=1367)&& (enter==1)){ 
+>>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
         new JanelasT1P3();
         JanelasTemplo01.getInstancia().dispose();
         enter=0;

@@ -59,12 +59,20 @@ PAREDE INI = 55
        Coord_P_x=1221-1;  
        }
      //-------------PORTA------------
+<<<<<<< HEAD
       // if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
       // ConfJanela.getInstancia().setVisible(true);
       //  Som.play("BGM_MAPA");
       // JanelasT2P1.getInstancia().dispose();
       //  enter=0;
       //  }     
+=======
+       if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
+       JanelasTemplo02.getInstancia().setVisible(true);
+       JanelasT2P1.getInstancia().dispose();
+        enter=0;
+        }     
+>>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
        //-------------PT SAIDA ------------
 
        if ((Coord_P_x>=68) && (Coord_P_x<=160)&& (enter==1)){ 

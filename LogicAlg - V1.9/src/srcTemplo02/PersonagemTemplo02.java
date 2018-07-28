@@ -55,6 +55,7 @@ public class PersonagemTemplo02 extends JFrame{
 
 //-------------Escolha mesa 01 ------------
 
+<<<<<<< HEAD
      if ((Coord_P_x>=309  ) && (Coord_P_x<=416)&& (enter==1)){ 
         new JanelasT2P1(); 
         JanelasTemplo02.getInstancia().dispose();
@@ -71,6 +72,21 @@ public class PersonagemTemplo02 extends JFrame{
        if ((Coord_P_x>=852) && (Coord_P_x<=955 )&& (enter==1)){ 
         new JanelasT2P3();
         JanelasTemplo02.getInstancia().dispose();
+=======
+        if ((Coord_P_x>=458  ) && (Coord_P_x<=597)&& (enter==1)){ 
+    new JanelasT2P1();   
+    ConfJanela.getInstancia().setVisible(false);
+    enter=0;
+        }
+//-------------Escolha mesa 02 ------------
+        if ((Coord_P_x>=815  ) && (Coord_P_x<=956 )&& (enter==1)){ 
+        new JanelasT2P2(); 
+        enter=0;
+        }    
+//-------------Escolha mesa 03 ------------
+        if ((Coord_P_x>=1218) && (Coord_P_x<=1327 )&& (enter==1)){ 
+        new JanelasT2P3();
+>>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
         enter=0;
         }
        

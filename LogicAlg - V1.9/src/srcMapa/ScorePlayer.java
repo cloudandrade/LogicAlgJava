@@ -28,14 +28,36 @@ public class ScorePlayer extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLJogador = new javax.swing.JLabel();
+        jLPontos = new javax.swing.JLabel();
+        jLFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagemMapa/score.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 796, 448);
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel2.setText("Pontuação");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 160, 40));
+
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        jLabel1.setText("Jogador          |           Pontos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 260, 50));
+
+        jLJogador.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLJogador.setForeground(new java.awt.Color(255, 204, 0));
+        jLJogador.setText("Player");
+        getContentPane().add(jLJogador, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 160, 40));
+
+        jLPontos.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLPontos.setForeground(new java.awt.Color(255, 204, 0));
+        jLPontos.setText("Ponto");
+        getContentPane().add(jLPontos, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 180, 40));
+
+        jLFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagemMapa/score.png"))); // NOI18N
+        getContentPane().add(jLFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -76,6 +98,10 @@ public class ScorePlayer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLFundo;
+    private javax.swing.JLabel jLJogador;
+    private javax.swing.JLabel jLPontos;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

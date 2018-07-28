@@ -7,7 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import srcMapa.ConfJanela;
 import srcMapa.Som;
+<<<<<<< HEAD
 import srcT1P1.PersonagemT1P1;
+=======
+>>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
 import srcTemplo01.JanelasTemplo01;
 
 public class PersonagemT1P2 extends JFrame{
@@ -49,10 +52,15 @@ public class PersonagemT1P2 extends JFrame{
   
 //-------------PT SAIDA ------------
 
+<<<<<<< HEAD
         if ((Coord_P_x>=57) && (Coord_P_x<=195)&& (enter==1)){ 
            
        JanelasTemplo01.getInstancia().setVisible(true);
        System.out.println(pontost1p2 + PersonagemT1P1.getInstancia());
+=======
+        if ((Coord_P_x>=105) && (Coord_P_x<=238)&& (enter==1)){ 
+        JanelasTemplo01.getInstancia().setVisible(true);
+>>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
        JanelasT1P2.getInstancia().dispose();
        enter=0;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
