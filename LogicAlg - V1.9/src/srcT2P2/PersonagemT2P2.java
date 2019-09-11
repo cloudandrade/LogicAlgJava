@@ -37,15 +37,15 @@ public class PersonagemT2P2 extends JFrame{
        Coord_P_y += Coord_M_y; //A Coordenada do personagem vai somar com a Coordenada de movimentos na tela. 
        
         //-------------SAIDA------------
-<<<<<<< HEAD
-        if ((Coord_P_y <= 553) &&(Coord_P_x>=486 && Coord_P_x<=564) &&(enter==1)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
-        new JanelasTemplo02();
-        dispose();
-=======
+//<<<<<<< HEAD
+//        if ((Coord_P_y <= 553) &&(Coord_P_x>=486 && Coord_P_x<=564) &&(enter==1)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
+//        new JanelasTemplo02();
+//        dispose();
+//=======
         if ((Coord_P_y <= 750) &&(Coord_P_x>=706 && Coord_P_x<=782) &&(enter==1)){ //CHEGOU NA PARTE DE BAIXO DA ESCADA
         JanelasTemplo02.getInstancia().setVisible(true);
         JanelasT2P1.getInstancia().dispose();
->>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
+
         enter=0;
         }
         

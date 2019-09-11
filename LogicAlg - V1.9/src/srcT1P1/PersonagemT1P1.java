@@ -46,14 +46,14 @@ public class PersonagemT1P1 extends JFrame{
        if (Coord_P_x>=1700){ // Para não ultrapassar a parede direita.//1151
        Coord_P_x=1700-1;  
        }
-<<<<<<< HEAD
+
      //-------------PORTA de saida------------
-       if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=180)&& (enter==1)){ 
-       JanelasTemplo01.getInstancia().setVisible(true);
-       JanelasT1P1.getInstancia().dispose();
-        enter=0;
-        }     
-=======
+//       if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=180)&& (enter==1)){ 
+//       JanelasTemplo01.getInstancia().setVisible(true);
+//       JanelasT1P1.getInstancia().dispose();
+//        enter=0;
+//        }     
+
      //-------------PORTA------------
       // if ((Coord_P_y>=Coord_P_y)&&(Coord_P_y<=Coord_P_y)&&(Coord_P_x>=30) && (Coord_P_x<=165)&& (enter==1)){ 
       // JanelasTemplo01.getInstancia().setVisible(true);
@@ -67,7 +67,6 @@ public class PersonagemT1P1 extends JFrame{
         JanelasT1P1.getInstancia().dispose();
         enter=0;
         }
->>>>>>> 1677b1e294d1feb801ab373aa50c04188136bc4e
        
         
 //-------------Escolha DICA ------------
