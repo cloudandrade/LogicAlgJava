@@ -12,10 +12,18 @@ A versão é Jogável, porém foi descontinuada por desintegração da equipe du
 O jogo foi inicialmente criado por alunos da instituição de ensino superior como projeto de intervenção social
 e participou de eventos demonstrativos como Gamepólitan e Exposição de projetos da própria faculdade.
 
+### Pré-requisitos:
+
+Obter o Java versão 7 ou posterior instalado.
+
 
 ### Instalação
 
-<<>BREVE<>>
+Disponibilizarei somente para fins de demonstração um link contendo o instalador, o instalador por padrão irá instalar na pasta arquivos de programas(x86) não criando atalho na área de trabalho, portanto se quiser pode alterar para alguma pasta de sua preferencia.
+O instalador possui tamanho demasiado grande pois não comprimimos as imagens e áudios do jogo, caso possuam problemas com o tamanho do instalador deixem comentários, que diminuirei o tamanho consideravelmente.
+
+Link:
+https://mega.nz/#!vRQBzAiC!Aa3UlKx9Ov844FzACT3gI6hxSQTbHe-BiP8dLWKxYJw
 
 
 ### Instruções e Objetivo
