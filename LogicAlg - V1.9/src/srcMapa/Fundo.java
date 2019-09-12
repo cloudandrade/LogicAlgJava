@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import srcPontos.FilaLogicAlg;
+import srcPontos2.Pontinhos;
+import srcT1P1.JanelasT1P1;
 import srcTemplo01.JanelasTemplo01;
 import srcTemplo02.JanelasTemplo02;
 
@@ -36,7 +38,7 @@ public Fundo() {
 ImageIcon referencia = new ImageIcon("src\\ImagemMapa\\fase.png"); // CRIANDO A IMAGEM DO FUNDO PEGANDO A IAMGEM DA - src\\Imagens\\fase.png
 imagem = referencia.getImage();// "IMAGEM" VAI RECEBER A IMAGEM QUE ESTA NA PASTA
 
-this.x=(-398); // O FUNDO VAI COMEÇAR NA POSIÇÃO X = 0 //posição do personagem em relação ao mapa em horizontal(-398)
+this.x=(-398); // O FUNDO VAI COMEÇAR NA POSIÇÃO X = -398 //posição do personagem em relação ao mapa em horizontal(-398) T23157
 this.y=0;// O FUNDO VAI COMEÇAR NA POSIÇÃO Y = 0
 x=getX();
 
@@ -48,39 +50,73 @@ public void mexer(){//PARA SE MOVIMENTAR
         teste = new JFrame();
 
         fila = new FilaLogicAlg();
-        System.out.println("FUNDO = " + x);
+        //System.out.println("FUNDO = " + x);
         
     x +=dx;// A POSIÇÃO X DO PERSONAGEM VAI RECEBER X + DX ( DX É DEFINIDO PELO keyPressed )
     y +=dy;// A POSIÇÃO Y DO PERSONAGEM VAI RECEBER Y + Dy ( DY É DEFINIDO PELO keyPressed )
     
-    if(x>-283){//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
-    x=-283;//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
+    if(x>-335){//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
+    x=-335;//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
     }//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO INICIO DA FASE
- 
-    if(x >= 0-1705 && x <= 0-1592  && enter ==1){// TEMPLO 01 //-1592 | -1705
+    
+    //if(x>-11349){//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO FIM DA FASE
+   // x=-11349;//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO FIM DA FASE
+   // }//PARA QUE A IMAGEM DO FUNDO NÃO SE MOVIMENTE QUANDO O USUARIO CHEGAR NO FIM DA FASE
+   
+    if ((y>=y)&&(y<=y)&&(x>=0-5331) && (x<=0-9777)&& (enter==1)){ 
+       // Som.play("MUSIC_FIM");
+         enter=0;
+     }  
+    
+    if ((y>=y)&&(y<=y)&&(x>=0-398) && (x<=0-5330)&& (enter==1)){ 
+        // Som.play("BGM_MAPA");
+         enter=0;
+     } 
+    
+
+    if(x >= 0-1375 && x <= 0-1262  && enter ==1){// TEMPLO 01 //-1592 | -1705
    // new Templo01().show(); 
-    new JanelasTemplo01().show();
+    new JanelasTemplo01();
     ConfJanela.getInstancia().setVisible(false);
     casaum+=1;
     ordem=1;
     enter=0;
     }
 
-    if(x <= 0-3976 && x>= 0-4082 && enter ==1){// TEMPLO 02 //-3976 |  -4082
-    new JanelasTemplo02().show();
+    if(x <= 0-3103 && x>= 0-3218 && enter ==1){// TEMPLO 02 //-3976 |  -4082
+    new JanelasTemplo02();
     ConfJanela.getInstancia().setVisible(false);
     casadois+=1;
     ordem=2;
     enter=0;
     }
 
-    if(x <= 0-3406 && x>= 0-3482 && enter ==1){// casa 03 
+    //if(x <= 0-3406 && x>= 0-3482 && enter ==1){// casa 03 
     //new CasaTres().show();
-    ConfJanela.getInstancia().setVisible(false);
-    casatres+=1;
-    ordem=3;
-    enter=0;
-    }
+    //ConfJanela.getInstancia().setVisible(false);
+    //casatres+=1;
+    //ordem=3;
+    //enter=0;
+   // }
+    
+   /*
+ +++++++++++++++++++++++++++++++++++++++
+
+T2: -3103 x -3218
+
+FIM: -4244 x -4332
+
+STRANGER: -5331 x -9777
+
+CASTELO: -10816 x -11252
+
+FIM: -11349
+
+ +++++++++++++++++++++++++++++++++++++++    
+    
+    */
+    
+    
 
     if(x <= 0-4536 && x>= 0-4614 && enter ==1){// casa 04 
     //new CasaQuatro().show();

@@ -25,11 +25,13 @@ public ConfJanela(){//CONSTRUTOR DA CLASSE
     sair.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent ae) {
-      new Menu(); //instanciando a classe meu frame para poder usar os metodos dela.
+      
+        
+        new Menu(); //instanciando a classe meu frame para poder usar os metodos dela.
       trocatela = Menu.getInstancia();
      // trocatela.setExtendedState(JFrame.MAXIMIZED_BOTH); 
       trocatela.show();
-     dispose();
+     janelaconf.dispose();
     }
     });    
    
@@ -41,6 +43,7 @@ public ConfJanela(){//CONSTRUTOR DA CLASSE
     
     
    janelaconf.add(new Fase());//CRIANDO UMA NOVA FASE - A PARTIR DE "src.Fase.java"
+   
     
 
     //CRIANDO UMA NOVA JANELA
@@ -49,8 +52,8 @@ public ConfJanela(){//CONSTRUTOR DA CLASSE
     Dimension tela = Toolkit.getDefaultToolkit().getScreenSize();//pega o tamanho da resolução da tela
     int telalar = (int) tela.getWidth();//pega a largura da tela
     int telaalt = (int) tela.getHeight();//pega a altura da tela
-    janelaconf.setSize(1280,1024);//coloca a altura e largura específica da resolução do monitor
-    janelaconf.setUndecorated(false);
+    janelaconf.setSize(1366,768);//coloca a altura e largura específica da resolução do monitor
+    janelaconf.setUndecorated(true);
     janelaconf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);//FECHAR PROGRAMA QUANDO APERTAR NO "X"
     janelaconf.setLocationRelativeTo(null);//A JANELA ABRIR NO CENTRO NA TELA
     janelaconf.setResizable(false);//ALTERAR O TAMANHO DA JANELA 

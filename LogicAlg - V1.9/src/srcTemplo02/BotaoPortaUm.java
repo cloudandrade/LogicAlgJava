@@ -22,6 +22,7 @@ import srcMapa.Instrucoes;
 import srcMapa.Objetivos;
 import srcMapa.Templo01;
 import srcT1P1.JanelasT1P1;
+import srcT2P1.JanelasT2P1;
 
 
 public class BotaoPortaUm extends JFrame{
@@ -53,7 +54,7 @@ public class BotaoPortaUm extends JFrame{
     add(oplogicos);
     setTitle("TEMPLO 02");
     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-    setSize(1280,1024);
+    setSize(1900,980);
     setUndecorated(true);
     setLocationRelativeTo(null);
     setVisible(true);
@@ -73,7 +74,7 @@ public class BotaoPortaUm extends JFrame{
     public void actionPerformed( ActionEvent e ){
 
     if (e.getSource()==oplogicos){
-    new JanelasT1P1();
+    //new JanelasT2P1();
     dispose();
     }          
     }

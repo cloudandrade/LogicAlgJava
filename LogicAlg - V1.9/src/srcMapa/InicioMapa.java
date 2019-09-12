@@ -1,5 +1,6 @@
 package srcMapa;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -32,14 +33,17 @@ public InicioMapa(){
 // aplica color transparent
 //btninicio.setBackground(new Color(0,0,0,0));
 
-    btninicio = new JButton(">>");
-    btninicio.setBounds(1150, 500, 100, 50);//
-    btnvoltarMenu = new JButton("<<");
-    btnvoltarMenu.setBounds(25, 500, 100, 50);//
+    btninicio = new JButton(">>");//btninicio = new JButton(">>");
+    btninicio.setBounds(1268,365, 60, 35);//X - Y - TAMNHO LARG - TAMNHO ALT
+    btnvoltarMenu = new JButton("<<");//btnvoltarMenu = new JButton("<<");
+    btnvoltarMenu.setBounds(35, 364, 60, 35);//
+    
+    btninicio.setBackground(new Color(255,255,255));
+    btnvoltarMenu.setBackground(new Color(255,255,255));
     
     inimapa.setTitle("LogicAlg - BETA");
-    inimapa.setSize(1280,1024);
-    inimapa.setUndecorated(false);
+    inimapa.setSize(1366,768);
+    inimapa.setUndecorated(true);
     inimapa.setDefaultCloseOperation(EXIT_ON_CLOSE);
     inimapa.setLocationRelativeTo(null);
     inimapa.setVisible(true);

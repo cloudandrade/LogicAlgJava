@@ -1,5 +1,6 @@
 package srcMapa;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -30,17 +31,20 @@ public Instrucoes() {
         };
   
     prox = new JButton(">>");
-    prox.setBounds(1150, 500, 100, 50);//
-        btnvoltar = new JButton("<<");
-    btnvoltar.setBounds(25, 500, 100, 50);;//
+    prox.setBounds(1268,365, 60, 35);//(1780, 505, 50, 50);
+    btnvoltar = new JButton("<<");
+    btnvoltar.setBounds(35, 364, 60, 35);//(45, 505, 50, 50)
+    
+    btnvoltar.setBackground(new Color(255,255,255));
+    prox.setBackground(new Color(255,255,255));
     
     instrucao.setTitle("LogicAlg - BETA");
     Dimension tela = Toolkit.getDefaultToolkit().getScreenSize();//pega o tamanho da resolução da tela
     int telalar = (int) tela.getWidth();//pega a largura da tela
     int telaalt = (int) tela.getHeight();//pega a altura da tela
     //desktop.setSize(1280,720);
-    instrucao.setSize(1280,1024);//coloca a altura e largura específica da resolução do monitor
-    instrucao.setUndecorated(false);
+    instrucao.setSize(1366,768);//coloca a altura e largura específica da resolução do monitor
+    instrucao.setUndecorated(true);
     instrucao.setDefaultCloseOperation(EXIT_ON_CLOSE);
     instrucao.setLocationRelativeTo(null);
     instrucao.setVisible(true);
