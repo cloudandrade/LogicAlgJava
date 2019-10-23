@@ -1,4 +1,5 @@
 @ repositório do jogo LogicAlg, versão feita em java.
+<img src="https://user-images.githubusercontent.com/37068857/67427261-2aa5bf00-f5b2-11e9-9107-9f22fce3a1a4.png" width="50px" height="50px" />
 
 
 # LogicAlg
@@ -60,4 +61,4 @@ Agradeço todo o apoio, espero que tenha bons momentos de diversão e possa apre
 
 
 
-##### LogicAlg® - all rights reserved - 2017 
+##### LogicAlg® - all rights reserved - 2017-2018
